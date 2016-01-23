@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design.html">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations.html">final project presentations</a></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 14: Networking and Communications</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p><strong>Summary:</strong></p>
+          <p>Link to files: <a href="https://github.com/kousukekikuchi/FabAcademy.2013/tree/master/Week-14">Github</a></p>
+          <p>hello.bus.45: success</p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/rfSac3MKfhQ" frameborder="0" allowfullscreen></iframe></p>
+          <p>hello.xbee.85: failure</p>
+          <p align="center"><img src="img/14-hello.xbee.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/14-hello.xbee2.jpg" width="300" height="300"></p>
+          <p>hello.xbee.85 was failed at making holes. I was not able to check the board worked properly. Does anyone know how to make a hole by using Modela and Fab Modules?</p>
+          <p><strong>hello.bus.45 (MCU was Attiny85)</strong></p>
+          <p>I succeeded milling, cutting, soldering and programming hello.bus.45 except one problem, the polarity of LED. At the verification of system, I programed LED blink and the board did not blink properly. </p>
+          <p>The system used in hello.bus.45.c is quite simple: this program defines the node id at macro. Hence, each MCU altered the node id if given an ID. Even though I had a problem on serial communication before, this board worked well. This ID was the important identification of each node. This function can be found at Arduino IDE, Wire.h. See the final project.</p>
+          <p>This time, </p>
+          <p><strong>hello.xbee.85</strong></p>
+          <p>When I think about the final project wireless communications should be needed. So, I tried hello.xbee.85 which can send message one node to the other. I designed two boards following the <a href="http://fab.cba.mit.edu/classes/863.12/people/matted/weekly-projects/13-networking.html">Matt's example</a>. Xbee was not able to accept 5[V] current. Hence, we must use 3.3 [V] regulator to decrease the voltage current to Xbee. One of the board has Attiny85 which can transmit the information to other board, and the other board can return the same information to the first one.</p>
+          <p>Schematics of transmitter:</p>
+          <p align="center"><img src="img/14_xbee.85.png" width="450" height="369"></p>
+          <p>Schematics of receiver:</p>
+          <p align="center"><img src="img/14-xbee_only_sche.png" width="450" height="264"></p>
+          <p>Since this receiver was followed by the schematics of Sparkfun's product, so schematics itself could have no error. But after milling and cutting, I was not able to setup proper holes of this schematics.          </p>
+          <p align="center"><img src="img/14_hello.85.xbee.milling.png" width="300" height="434"></p>
+          <p align="center">hello.85.xbee.milling.png</p>
+          <p align="center"><img src="img/14_hello.85.xbee.cutting.png" width="300" height="434"></p>
+          <p align="center">hello.85.xbee.cutting.png, with the diameter of the hole was 0.2 [mm]</p>
+          <p>the result:</p>
+          <p align="center"><img src="img/14-hello.xbee2.jpg" alt="" width="300" height="300"></p>
+          <p>The big holes of this board was not able to solder 1x10 2mm female pin header.          </p>
+          <p>[Solution] the cutting.png should reverse the black and white. Hence, if cutting holes into this board, this png format file will be:</p>
+          <p align="center"><img src="img/hello.85.xbee.cutting.png" width="300" height="434"></p>
+          <p>Because the endmill of Modela will run on the black side. </p>
+          <p>&nbsp;</p>
+          <p>Appendix:</p>
+          <p><strong>A bridge and two nodes. </strong></p>
+          <p>I was not able to use the flat cables because I was not able to buy the flat cable headers even in Akihabara. Also, I tried to make a connection by using a breadboard, since this communication method is simply to connect Tx, Rx for serial communication and VCC and GND for power supply. However, wrong connection between VCC and GND made a smoke on ATtiny85, ended up in making other node.</p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/JkB0EIPuNio" frameborder="0" allowfullscreen></iframe></p>
+          <p><strong>Mac user should use Macports version of avrdude.</strong></p>
+          <p>I found that /usr/local/bin/avrdude was different from /opt/local/bin/avrdude in Serial Communication. With build version, MCU did not communicate with serial communication likewise the failure of it at Input Devices. On the other hand, with macports, it was able to communicate. Maybe version or dependencies were different. To keep the latest version, macports is a powerful tool. To install avrdude and its dependencies, just simply command at terminal like this:</p>
+          <p>sudo port install avrdude avr-binutils avr-gcc avr-libc        </p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

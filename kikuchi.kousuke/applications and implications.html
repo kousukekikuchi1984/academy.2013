@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations">final project presentations</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 16: Application and Implication</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p><strong>Summary:</strong> How do I make own Arduino? How do I check all the sensors, communications and actuators? </p>
+          <p>I tried to make own Arduino, named <a href="http://www.watanabe.arch.waseda.ac.jp/tutorials/ArKou.html">ArKou</a>. I designed it with  ceramic resonator, so it could drive internal 8MHz or external clock. However, it does not work.</p>
+          <p><strong>assignment</strong>: plan and document a final project that integrates the range of units covered</p>
+          <p><strong>what will it do?</strong></p>
+          <p><img src="img/16-plant_hack.jpg" width="450" height="603"></p>
+          <p>1. a sensor node which can detect important environment for a plant.<br/>
+          2. Based on the data from the sensor node, LCD displays the emotion of plant by using Ascii Arts. <br/>
+          3. If possible, I want the plant to change the enviroment. e.g. open a window to decrease temperature, blink a light.</p>
+          <p><strong>who's done what beforehand?</strong></p>
+          <p>1. Checking arduino-compatible ATMega328<br/>
+          2. Learning wireless communication with XBee
+          <br/>3. Checking how to use all the sensors.
+          <br/>4. Checking how to use LCD
+          <br/>5. Design of the sensor node and actuator. The sensor node requires water-proof compartment and display should be cute.</p>
+          <p><strong>what materials and components will be required?</strong></p>
+          <p><strong>Sensor node:</strong></p>
+          <p>ATMega328 SMD<br/>
+          CO2 Sensor<br/>
+          Temperature and Humidity Sensor<br/>
+          Thermista<br/>
+          Moisture Sensor<br/>
+          Air Pressure Sensor<br/>
+          Piezo Sensor (to detect wind speed)<br/>
+          Photosensor<br/>
+          XBee</p>
+          <p><strong>Display node:</strong></p>
+          <p>ATMega328 SMD<br/>
+          LCD Unit<br/>
+          XBee          </p>
+          <p><strong>where will they come from?</strong></p>
+          <p>MCU, ATMega328 SMD: RS, Japan<br/>
+MG-8U, CO2 Sensor: ThaiEasyElec, Thailand<br/>
+DHT22, Temperature and Humidity Sensor: Sengoku, Japan<br/>
+Grove, Moisture Sensor: Sengoku, Japan<br/>
+MPL115A2, Air Pressure Sensor: Akitsuki, Japan<br/>
+Piezo Sensor (to detect wind speed): Sengoku, Japan<br/>
+Photosensor: Sengoku, Japan<br/>
+LMB0820, LCD Unit: Sengoku, Japan<br/>
+XBee: Sengoku, Japan<br/>
+NXFT15XH103FA2B, Thermista: Akitsuki, Japan</p>
+          <p><strong>how much will it cost?</strong></p>
+          <p>ATMega328 SMD: ¥180<br/>
+CO2 Sensor: $18<br/>
+Temperature and Humidity Sensor: ¥1280<br/>
+Moisture Sensor: ¥495<br/>
+Air Pressure Sensor: ¥500<br/>
+Piezo Sensor (to detect wind speed): ¥420<br/>
+Photosensor: ¥1000<br/>
+LCD Unit: ¥795<br/>
+XBee: ¥1980<br/>Thermista: ¥40
+          </p>
+          <p><strong>what parts and systems will be made?</strong></p>
+          <p>1. Arduino-compatible ATMega328 for verification.
+          <br/>2. XBee Wireless communcation
+          <br/>3. LED module          </p>
+          <p><strong>what processes will be used?</strong></p>
+          <p>1. Making Arduino Compatible ATMega328<br/>
+          2. Checking how to use the sensors, communication, and actuator based on ATMega328 with Arduino language.
+          <br/>3. Modifying the schematics of the board
+          <br/>4. Based on design of the boards, determining the design.</p>
+          <p><strong>what tasks need to be completed?</strong></p>
+          <p><strong><br>
+          what questions need to be answered?          </strong></p>
+          <p>How to make 20MHz ATMega compatible with Arduino IDE. According to Bas, 20MHz Arduino is possible, but sometimes serial communication might be failed. However, here in Japnan, 16MHz SMD resonator is hardly attained. </p>
+          <p><strong>what is the schedule?</strong></p>
+          <p>electronics design for 1 week
+          <br/>3D Design for 4 days
+          <br/>Recording video and editing it for 3 days.</p>
+          <p>
+            <strong>how will it be evaluated? </strong></p>
+          <p>Part of this project will be joint-research with Prof. Takaguchi, Environmental Engineering in Department of Architecture. Also, I am thinking to upload this project to cloud funding.</p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

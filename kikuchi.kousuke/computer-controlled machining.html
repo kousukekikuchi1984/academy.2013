@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+	  p.program{font-family:"Courier New", Courier, monospace}
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations">final project presentations</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 9: Computer Controlled Machining</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p><strong>Summary of this week's assignment:</strong></p>
+          <p>An Azimuthal Equidistant Projection Map Board (β) for Fab9JPN. Please come to Fab9 Japan, Yokohama. </p>
+          <p align="center"><img src="img/9-fab9.jpg" width="300" height="300"></p>
+          <p align="center">ようこそ 歡迎 Welcome Bienvanido Bemvindo Bienvenu Willkomen добро пожаловать ترحيب קבלת פן</p>
+          <p><strong>1. Introduction</strong></p>
+          <p>Maps are drawn in different methods and used in different purposes. For example, Japanese considers a nomal map as this one. Universe Transeverse Mercator Projection with horizontal pixel being fit to Japan.</p>
+          <p align="center"><img src="img/9-WorldMap_jaII.jpg" width="300" height="150"></p>
+          <p>European and North American use this map. Mercator Projection.</p>
+          <p align="center"><img src="img/9-world-map.jpg" width="300" height="179"></p>
+          <p>In Mercosur Countries (Argentine, Brasil, Paraguay, Urguay and Venezuela) upside-down-map (for the north hemisphere dwellers) is sometimes in use. South American nations sometimes use this map because of political issue in order to protest the selfish north hemisphere nations. Hence, map is created not only for the place but also for the specific purpose. </p>
+          <p>When I went to Wellington to attend Fab8NZ, there was a great exhibition of a mercator projection map. This is a picture of it.</p>
+          <p align="center"><img src="img/9-nzmap.jpg" width="430" height="255"></p>
+          <p>The center of the mercator projection was fit to Wellington to signify the participants are coming from all over the world. But since this map was different from the azimuthal equidistant projection, the participants cannot know the distance from Wellington. </p>
+          <p align="center"><img src="img/9-un logo.jpg" width="300" height="300"></p>
+          <p>The great example of  azimuthal equidistant projection is the logo of United Nation. Instead of not drawing Antactica, all continents were drawn in this map. So, my idea is to make a big map based on azimuthal equidistant projection with being the coordination fit to Yokohama to share the all participants' experience of <a href="http://fab9jp.com">Fab9JPN</a> [1].          </p>
+          <p align="center"><img src="img/9-diagram.jpg" width="300" height="300"></p>
+          <p><strong>2. Methods</strong><br/>
+          <strong>2.1 Making the azimuthal equidistant projection map</strong></p>
+          <p>To make azimuthal equidistant projection maps, several GIS tools can be available. But these application were costly. Hence I had to find out a new application. As a result I run into  <a href="http://www.soest.hawaii.edu/gmt/">The Generic Mapping Tools </a>[2], which requires <a href="http://www.unidata.ucar.edu/netcdf/">netCDF</a> [3]. This application could make the azumuthal equidistant projection map according to <a href="http://homepage1.nifty.com/~kdo/gmt42_je.html">this web site</a> [4].</p>
+          <p class="program">$ pscoast -Je0/90/1:250000000 -R0/360/-90/90 -Ggray -Ba30g10 &gt; map.eps</p>
+          <p align="center"><img src="img/9-northpolar.jpg" width="300" height="300"></p>
+          <p>The center of this map was the North Pole. Since Artactica is oppisite side of North Pole, Antactica was located the circumference of this circle. So, I modified the script to fit the coordination of Yokohama.</p>
+          <p class="program">$ pscoast -Je139.65/35.5/1:250000000 -R0/360/-90/90 -Ggray -Ba30g10 &gt; map.eps</p>
+          <p align="center"><img src="img/9-map.eps.jpg" width="300" height="300"></p>
+          <p>From this picture, we could see Asia, Australia, Africa, Europe, North America. But, South America was hard to be recognized. I must consider Mercator Projection or azimuthal equidistant projection.</p>
+          <p><strong>2.2 Design of the map board</strong></p>
+          <p>Since there is no Shopbot here in Japan, we had to use Rockler, which can cut 600[mm] x 700[mm] material. Based on the size restriction, the size of the board itself was determined. Also, leg locations of the map board were calculated based on the architectural structural engineering: the center of the legs is 150[mm] away from the edge. Also, I found communcation style of FabLab is &quot;horizontal&quot;, not &quot;vertical.&quot; Horizontal board is of course quite good for education. But, not for communication. So, I re-designed the map board.</p>
+          <p align="center"><img src="img/9-mapboard.jpg" width="300" height="300"></p>
+          <p>something like this:</p>
+          <p align="center"><img src="img/9-exhibition.jpg" width="450" height="390"></p>
+          <p>The picture above illustrated the milling area. Without white area, I tried to mill 2.5[mm] from the surface of polywood and paint this board.</p>
+          <p><strong>3. Milling and Cutting Polywood</strong></p>
+          <p>I bought a 900[mm] x 1800[mm] polywood and had cut the polywood 3 pieces of 600[mm] x 700[mm] at Keiyo D2. One board for the top table and the other two boards for the four legs. A working process was following clause: 1. engrave the map, 2: cut the legs, 3. paint the map, 4 assembly.</p>
+          <p><strong>3.1 Problems</strong></p>
+          <p>At milling the board, Rockler's oepration realm was two problem.  One of the problem was the operation area. Since it was merely limited to 500 x 500 [mm], Rockler could not engrave the earth properly. Also, The smallest endmill of Rockler was 5.5 [mm]. So the it would not engrave the board properly. Finally, most concerning for me was Hirose. Since he would have a job interview March 26, he should be prioritized. After the few minutes of discussion between Kanasaki, a master student at SFC*SFC, I altered the machine. For making legs and the map, I would use Epilog Laser Cutter, and for milling the circle, Rockler was used.</p>
+          <p align="center"><img src="img/9-diagram2.jpg" width="300" height="152"></p>
+          <p><strong>3.2 Making legs</strong></p>
+          <p>I cut two 600 x 700 [mm] polywoods into four 600 x 350 [mm] with a circular saw found in SFC *SFC. After the cut downs, I made 4 legs.</p>
+          <p align="center"><img src="img/9-legs.jpg" width="300" height="300"></p>
+          <p>But the problem is the speed of cutting. Normally, thin object can be cut within few minutes. On the other hand this 9 [mm] polywood required 50 minutes for cutting. (Power: 100%, Speed: 5%) In summary, laser cutter should be used for thin material.</p>
+          <p><strong>3.3 Engraving the Map</strong></p>
+          <p align="center"><img src="img/9-welcome.jpg" width="300" height="300"></p>
+          <p>日本へようこそ。Welcome to Yokohama, Japan. Bienvenido a Yokohama, Japón, especialmente Desde Japón sobre Fab9 para Barcelona, España Fab10. </p>
+          <p>Laser Cutter scripted as big as possible.</p>
+          <p align="center"><img src="img/9-end_mapboard.jpg" width="300" height="300"></p>
+          <p><strong>3.4 Milling the board</strong></p>
+          <p align="center"><img src="img/9-milling-2.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/9-milling-1.jpg" width="300" height="300"></p>
+          <p>But, there might be a gender tilt in this board. Also, I tried the revserse side, so thin area can be found a big horrow. </p>
+          <p align="center"><img src="img/9-upper.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/9-bottom.jpg" width="300" height="300"></p>
+          <p>I found later CNC Router should not be availed for milling. One of the reasons is endmill. Since the endmill of this machine is relatively larger than Modela and this simple fact made scrupting with CNC quite difficult than other Laser Cutter. </p>
+          <p align="center"><img src="img/9-fab9.jpg" width="300" height="300"></p>
+          <p><strong>4. Discussion</strong></p>
+          <p>1. Laser Cutter: cut middle sized thin material without some reflective ones.          </p>
+          <p>2. Modela: can engrave and cut tiny object but takes long time.</p>
+          <p>3. CNC Router: cut big material, not for engrave          </p>
+          <p><strong>References:</strong></p>
+          <p>[1] FAB9 committee, Social Fabrication Lab Keio University SFC (n.d.): &quot;the Ninth International FabLab Conference in Yokohama, Japan &quot;Personal Fabrication as the new dawn of renaissance&quot;&quot; retrieved from http://fab9jp.com at March 23, 2013</p>
+          <p>[2] Paul Wessel, University of Hawaii (January 1, 2013) &quot;The GMT Homepage&quot; retrieved from http://www.soest.hawaii.edu/gmt/ at March 23, 2013</p>
+          <p>[3] Unidata, UCAR (n.d.) &quot;Unidata | NetCDF&quot; from http://www.unidata.ucar.edu/software/netcdf/ at March 23, 2013</p>
+          <p>[4] KDO (April 1, 2011) &quot;いちからはじめる GMT その42 -Je（正距方位図法）&quot; retrieved from http://homepage1.nifty.com/~kdo/gmt42_je.html at March 23, 2013</p>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

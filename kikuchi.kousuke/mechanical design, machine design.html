@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+	.highligh .hll { background-color: #ffffcc }
+.highligh  { background: #f8f8f8; }
+.highligh .c { color: #408080; font-style: italic } /* Comment */
+.highligh .err { border: 1px solid #FF0000 } /* Error */
+.highligh .k { color: #008000; font-weight: bold } /* Keyword */
+.highligh .o { color: #666666 } /* Operator */
+.highligh .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highligh .cp { color: #BC7A00 } /* Comment.Preproc */
+.highligh .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highligh .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highligh .gd { color: #A00000 } /* Generic.Deleted */
+.highligh .ge { font-style: italic } /* Generic.Emph */
+.highligh .gr { color: #FF0000 } /* Generic.Error */
+.highligh .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highligh .gi { color: #00A000 } /* Generic.Inserted */
+.highligh .go { color: #808080 } /* Generic.Output */
+.highligh .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highligh .gs { font-weight: bold } /* Generic.Strong */
+.highligh .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highligh .gt { color: #0040D0 } /* Generic.Traceback */
+.highligh .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highligh .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highligh .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highligh .kp { color: #008000 } /* Keyword.Pseudo */
+.highligh .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highligh .kt { color: #B00040 } /* Keyword.Type */
+.highligh .m { color: #666666 } /* Literal.Number */
+.highligh .s { color: #BA2121 } /* Literal.String */
+.highligh .na { color: #7D9029 } /* Name.Attribute */
+.highligh .nb { color: #008000 } /* Name.Builtin */
+.highligh .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highligh .no { color: #880000 } /* Name.Constant */
+.highligh .nd { color: #AA22FF } /* Name.Decorator */
+.highligh .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highligh .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highligh .nf { color: #0000FF } /* Name.Function */
+.highligh .nl { color: #A0A000 } /* Name.Label */
+.highligh .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highligh .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highligh .nv { color: #19177C } /* Name.Variable */
+.highligh .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highligh .w { color: #bbbbbb } /* Text.Whitespace */
+.highligh .mf { color: #666666 } /* Literal.Number.Float */
+.highligh .mh { color: #666666 } /* Literal.Number.Hex */
+.highligh .mi { color: #666666 } /* Literal.Number.Integer */
+.highligh .mo { color: #666666 } /* Literal.Number.Oct */
+.highligh .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highligh .sc { color: #BA2121 } /* Literal.String.Char */
+.highligh .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highligh .s2 { color: #BA2121 } /* Literal.String.Double */
+.highligh .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highligh .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highligh .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highligh .sx { color: #008000 } /* Literal.String.Other */
+.highligh .sr { color: #BB6688 } /* Literal.String.Regex */
+.highligh .s1 { color: #BA2121 } /* Literal.String.Single */
+.highligh .ss { color: #19177C } /* Literal.String.Symbol */
+.highligh .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highligh .vc { color: #19177C } /* Name.Variable.Class */
+.highligh .vg { color: #19177C } /* Name.Variable.Global */
+.highligh .vi { color: #19177C } /* Name.Variable.Instance */
+.highligh .il { color: #666666 } /* Literal.Number.Integer.Long */
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design.html">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations.html">final project presentations</a></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 15: Mechanical Design, Machine Design</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p><strong>Summary</strong>: A Galileo's Pendulum Clock          </p>
+          <p>Added at July 28 about simple machine for Flip Comic.</p>
+          <p>Data are available at <a href="http://academy.cba.mit.edu/2013/students/kikuchi.kousuke/Data/mechanical_design">this link</a>.</p>
+          <p> design </p>
+          <p>
+            <iframe width="450" height="253" src="http://www.youtube.com/embed/YzmwsrqIzI0" frameborder="0" allowfullscreen></iframe>
+          </p>
+          <p align="center">
+            <iframe width="420" height="315" src="//www.youtube.com/embed/3Oz1ulGpSY8" frameborder="0" allowfullscreen></iframe>
+          </p>
+          <p>This week's assignment was to design or modify a machine which could be moved manually, and to automate the machine. When I thought about the assignment, pendulum clock came to my mind. The historical clock was designed by Galileo Galilei, with the discovery of pendulum.</p>
+          <p align="center"> <img src="http://www.cs.rhul.ac.uk/home/adrian/images/Galileo_scheme.png" width="300">
+          </p>
+          <p align="center">Galileo's pendulum clock          </p>
+          <p>I was able to find the good example of Galileo's Pendulum Clock from <a href="http://www.thingiverse.com/thing:31439">Thingiverse</a>. Based on this example, I learned the system and mechanism of the clock.</p>
+          <p><strong>Necessities:</strong><br/>
+          1: 600 x 300 sized plywood with 5mm thickness (The file recomended to use 600 x 450 plywood,but if we use second document of the file, 600 x 300 was enough)
+          <br/>2: 4.5 [mm] shaft
+          <br/>
+          3: 5.5 [mm] shaft
+          <br/>
+          4: 10 flanges (download <a href="https://github.com/kousukekikuchi/FabAcademy.2013/blob/master/Week-15/Galileos_Pendulum_Clock/flange_5mm.stl">this stl file</a> and output 10 pieces)    </p>
+          <p><strong>Assembly</strong></p>
+          <p>A cdr format file is for CorelDRAW. After opening the file, I outputed this file with Epilog Laser Cutter. (Recommned parameters were power 100%, speed 10%)</p>
+          <p align="center"><img src="img/15-differnt.jpg" alt="" width="300" height="300"></p>
+          <p>But, the problem was different thickness. Here in Japan, no material could be found with 5mm thickness. It gave me difficult assemble step.</p>
+          <p align="center"><img src="img/15-sandout.jpg" width="300" height="300"></p>
+          <p>So, I sanded out 0.5mm. </p>
+          <p align="center"><img src="img/15-assembly.jpg" width="300" height="300"></p>
+          <p> Difficult to assemble.          </p>
+          <p>I found shafts were needed. So I bought them with 4 [mm], 5 [mm] and 6 [mm]. </p>
+          <p align="center"><img src="img/15-needflinge.jpg" width="300" height="300"></p>
+          <p>After bit of assembly, flanges were needed. So, I designed with Rhinoceros.</p>
+          <p align="center"><img src="img/15-flanges.png" width="300" height="298"> </p>
+          <p>And Replicator printed out 6 flanges. But I found other 4 flanges were required.</p>
+          <p align="center"><img src="img/15-mechanism.jpg" width="300" height="300"></p>
+          <p>The mechanism of Galileo's Pendulum Clock.</p>
+          <p><iframe width="450" height="253" src="http://www.youtube.com/embed/zzlinBiblxc" frameborder="0" allowfullscreen></iframe></p>
+          <p>Since I sanded 6mm of shafts into 5.5mm, these ragged parts create gap between each parts. The ragged parts between shafts and gear created less friction than ordinary parts and were not able to transmit power to the next. So, I glued all the parts.  <strong>Does anyone know how the mechanical engineer designs gears and shafts which can transmit power?</strong></p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/-29rHwL3gKw" frameborder="0" allowfullscreen></iframe></p>
+          <p>Succeeded assembling with adhensive. But the sanded shaft also created a ragged surface on it. And made a tilt between shaft and gear.</p>
+          <p align="center"><img src="img/15-tilt.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/15-clock.jpg" alt="" width="300" height="300"></p>
+          <p>But after the assembly, it was not able to work properly. The rotation of the gears was not fit if I rotated the first shaft.</p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/YzmwsrqIzI0" frameborder="0" allowfullscreen></iframe></p>
+          <p><strong>Problems on this clock</strong></p>
+          <p>Most problems on this Galileo's Pendulum Clock were thought to be three points.          </p>
+          <p>Firstly, rigid joints were not implemented in this mechanism. This fact created too loose for gears and shafts to transmit their power. </p>
+          <p>Secondly, the different size of parts had to be sanded out manually, and emerged ragged surface on the shafts. This fact distorted the axes of the gears, and slightly change  their flequencies. </p>
+          <p>Thirdly, design of the gear might be different. The gears used in this clock were angular. Since gear is basically rotated, a kind of circular trajectory should be illustrated.</p>
+          <p align="center"><img src="img/15-gears.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/15-geardesign.jpg" width="302" height="302"></p>
+          <p align="center">&nbsp;</p>
+          <p><strong>Requirements to fit each gears</strong></p>
+          <p>1. Normal pitches to be same.</p>
+          <p>2. Shape of the teeth to be properly designed.          </p>
+          <p><strong>Redesign of the clock</strong></p>
+          <p>I modified the pdf file to fit to JIS. This design requires 600[mm] x 300[mm] x 5.5[mm] MDF or plywood, 5[mm] and 6[mm] shafts. Also, 10 flanges are necessary. All the files can downloaded from <a href="https://github.com/kousukekikuchi/FabAcademy.2013/tree/master/Week-15/Galileos_Pendulum_Clock">my GitHub</a>. But, I was not able to alter the gear design.</p>
+          <p>&nbsp;</p>
+          <p><strong>Flip Comic</strong></p>
+          <p>I found Some products were decorated with flip comic, &quot;afternoon tea&quot; by Kirin Corp.</p>
+          <p align="center"><iframe width="420" height="315" src="//www.youtube.com/embed/Pq7EoK6g4-4" frameborder="0" allowfullscreen></iframe></p>
+          <p>I wanted to automated flip comic machine. So, after the failure of the pendulum clock, I attempted to make this one.</p>
+          <p>Firstly, I simply designed the machine based on Illustrator CS6, and gear design was attained from web page. Also, from July 25, I was able to use Universal Lasercutter VSL3.50. Since this laser cutter outputs only 30W, I had to check the power and speed parameters.</p>
+          <p>FIrst trial:</p>
+          <p align="center"><img src="img/15-gear.png" width="420" height="418"> </p>
+          <p>This is the first mechanics design. The bottom layer was glued to the second bottom layer, making rotation of the pictures. However, I found two mistakes. First of all, it was impossible to assemble its structure. Also, since the two bottom layers were rotated, it required a lot of torque at rotating this machine. So I re-designed.</p>
+          <p>Second trial.</p>
+          <p align="center"><img src="img/15-gear-2.png" width="420" height="435"></p>
+          <p>This time, the top Z=14 gear was attached to Z=44, and transmit the power to Z=14 gear which is connected to the rotation layer. </p>
+          <p align="center"><img src="img/15-gear.3.jpg" width="420" height="420"></p>
+          <p align="center"><img src="img/15-poo.jpg" width="420" height="420"></p>
+          <p align="center"><img src="img/15-pictures.jpg" width="420" height="420"></p>
+          <p align="center"><iframe width="420" height="236" src="//www.youtube.com/embed/jbh7gWsqIAk" frameborder="0" allowfullscreen></iframe></p>
+          <p>it was able to rotate properly, except the fact that I was not able to see proper flip comic. To see it, it requires the exact timing of blink. Indeed, I used a combination of stepper motor for automation and a white LED to show this comic. </p>
+          <p><strong>Stepper Motor</strong></p>
+          <p>I bought two stepper motors at Akihabarafor this assignment. <a href="http://akizukidenshi.com/download/ds/mercurymotor/ST-42BYG0506.pdf">st-42byg0506h</a> and <a href="http://5umaimai.com/product/132291440035019.htm">24BYJ48</a>. Since the Maker movement of Japan has been quite different from the United States, I was not able to attain some of the FabLab Inventory.</p>
+          <p> I milled a board and stuffed all necesities for stepper example. But, something wrong with the 24BYJ48. Because after checking data sheet carefully, this requires 12V of electricity and 8 phases at driving it. For example, to drive this motor, we should switch like this:</p>
+          <p>1 -&gt; 1 and 2 -&gt; 2 -&gt; 2 and 3 -&gt; 3 -&gt; 3 and 4 -&gt; 4 -&gt; 4 and 1</p>
+          <p>Unless I bought 12V and 9V DC batteries, I did not try using this one because I should add some of programs.</p>
+          <p>The second motor was st-42byg0506h. It can drive properly by using a sample board. </p>
+          <p align="center"><iframe width="420" height="236" src="//www.youtube.com/embed/mZHzjXiuxUU" frameborder="0" allowfullscreen></iframe></p>
+          <p> I used sample program for moving.</p><div class="highligh" style="overflow:auto;word-wrap:normal"><pre style="padding:.5em"><span class="c1">//</span>
+<span class="c1">//</span>
+<span class="c1">// hello.stepper.44.full.c</span>
+<span class="c1">//</span>
+<span class="c1">// full stepping hello-world</span>
+<span class="c1">//</span>
+<span class="c1">// Neil Gershenfeld</span>
+<span class="c1">// 11/14/10</span>
+<span class="c1">//</span>
+<span class="c1">// (c) Massachusetts Institute of Technology 2010</span>
+<span class="c1">// Permission granted for experimental and personal use;</span>
+<span class="c1">// license for commercial sale available from MIT.</span>
+<span class="c1">//</span>
+
+<span class="cp">#include &lt;avr/io.h&gt;</span>
+<span class="cp">#include &lt;util/delay.h&gt;</span>
+
+<span class="cp">#define output(directions,pin) (directions |= pin) </span><span class="c1">// set port direction for output</span>
+<span class="cp">#define set(port,pin) (port |= pin) </span><span class="c1">// set port pin</span>
+<span class="cp">#define clear(port,pin) (port &amp;= (~pin)) </span><span class="c1">// clear port pin</span>
+<span class="cp">#define pin_test(pins,pin) (pins &amp; pin) </span><span class="c1">// test for port pin</span>
+<span class="cp">#define bit_test(byte,bit) (byte &amp; (1 &lt;&lt; bit)) </span><span class="c1">// test for bit set</span>
+
+<span class="cp">#define MOSFET_port PORTA </span><span class="c1">// MOSFET port</span>
+<span class="cp">#define MOSFET_direction DDRA </span><span class="c1">// MOSFET direction</span>
+<span class="cp">#define brown (1 &lt;&lt; PA0) </span><span class="c1">// MOSFET output pins</span>
+<span class="cp">#define black (1 &lt;&lt; PA1) </span><span class="c1">// &quot;</span>
+<span class="cp">#define yellow (1 &lt;&lt; PA2) </span><span class="c1">// &quot;</span>
+<span class="cp">#define orange (1 &lt;&lt; PA3) </span><span class="c1">// &quot;</span>
+<span class="cp">#define on_delay() _delay_us(50) </span><span class="c1">// PWM on time</span>
+<span class="cp">#define off_delay() _delay_us(10) </span><span class="c1">// PWM off time</span>
+<span class="cp">#define PWM_count 200 </span><span class="c1">// number of PWM cycles</span>
+
+<span class="k">static</span> <span class="kt">uint8_t</span> <span class="n">count</span><span class="p">;</span>
+
+<span class="c1">//</span>
+<span class="c1">// yellow, brown PWM pulse</span>
+<span class="c1">//</span>
+<span class="kt">void</span> <span class="nf">pulse_yellow_brown</span><span class="p">()</span> <span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">PWM_count</span><span class="p">;</span> <span class="o">++</span><span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">set</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">yellow</span><span class="p">);</span>
+      <span class="n">set</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">brown</span><span class="p">);</span>
+      <span class="n">on_delay</span><span class="p">();</span>
+      <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">yellow</span><span class="p">);</span>
+      <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">brown</span><span class="p">);</span>
+      <span class="n">off_delay</span><span class="p">();</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="c1">//</span>
+<span class="c1">// yellow, black PWM pulse</span>
+<span class="c1">//</span>
+<span class="kt">void</span> <span class="nf">pulse_yellow_black</span><span class="p">()</span> <span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">PWM_count</span><span class="p">;</span> <span class="o">++</span><span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">set</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">yellow</span><span class="p">);</span>
+      <span class="n">set</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">black</span><span class="p">);</span>
+      <span class="n">on_delay</span><span class="p">();</span>
+      <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">yellow</span><span class="p">);</span>
+      <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">black</span><span class="p">);</span>
+      <span class="n">off_delay</span><span class="p">();</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="c1">//</span>
+<span class="c1">// orange, brown PWM pulse</span>
+<span class="c1">//</span>
+<span class="kt">void</span> <span class="nf">pulse_orange_brown</span><span class="p">()</span> <span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">PWM_count</span><span class="p">;</span> <span class="o">++</span><span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">set</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">orange</span><span class="p">);</span>
+      <span class="n">set</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">brown</span><span class="p">);</span>
+      <span class="n">on_delay</span><span class="p">();</span>
+      <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">orange</span><span class="p">);</span>
+      <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">brown</span><span class="p">);</span>
+      <span class="n">off_delay</span><span class="p">();</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="c1">//</span>
+<span class="c1">// orange, black PWM pulse</span>
+<span class="c1">//</span>
+<span class="kt">void</span> <span class="nf">pulse_orange_black</span><span class="p">()</span> <span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">PWM_count</span><span class="p">;</span> <span class="o">++</span><span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">set</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">orange</span><span class="p">);</span>
+      <span class="n">set</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">black</span><span class="p">);</span>
+      <span class="n">on_delay</span><span class="p">();</span>
+      <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">orange</span><span class="p">);</span>
+      <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">black</span><span class="p">);</span>
+      <span class="n">off_delay</span><span class="p">();</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="c1">//</span>
+<span class="c1">// clockwise step</span>
+<span class="c1">//</span>
+<span class="kt">void</span> <span class="nf">step_cw</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">pulse_yellow_brown</span><span class="p">();</span>
+   <span class="n">pulse_yellow_black</span><span class="p">();</span>
+   <span class="n">pulse_orange_black</span><span class="p">();</span>
+   <span class="n">pulse_orange_brown</span><span class="p">();</span>
+   <span class="p">}</span>
+<span class="c1">//</span>
+<span class="c1">// counter-clockwise step</span>
+<span class="c1">//</span>
+<span class="kt">void</span> <span class="nf">step_ccw</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">pulse_orange_brown</span><span class="p">();</span>
+   <span class="n">pulse_orange_black</span><span class="p">();</span>
+   <span class="n">pulse_yellow_black</span><span class="p">();</span>
+   <span class="n">pulse_yellow_brown</span><span class="p">();</span>
+   <span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+   <span class="c1">//</span>
+   <span class="c1">// main</span>
+   <span class="c1">//</span>
+   <span class="k">static</span> <span class="kt">uint8_t</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">;</span>
+   <span class="c1">//</span>
+   <span class="c1">// set clock divider to /1</span>
+   <span class="c1">//</span>
+   <span class="n">CLKPR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">CLKPCE</span><span class="p">);</span>
+   <span class="n">CLKPR</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">CLKPS3</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">CLKPS2</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">CLKPS1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">CLKPS0</span><span class="p">);</span>
+   <span class="c1">//</span>
+   <span class="c1">// initialize MOSFET pins</span>
+   <span class="c1">//</span>
+   <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">brown</span><span class="p">);</span>
+   <span class="n">output</span><span class="p">(</span><span class="n">MOSFET_direction</span><span class="p">,</span> <span class="n">brown</span><span class="p">);</span>
+   <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">black</span><span class="p">);</span>
+   <span class="n">output</span><span class="p">(</span><span class="n">MOSFET_direction</span><span class="p">,</span> <span class="n">black</span><span class="p">);</span>
+   <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">yellow</span><span class="p">);</span>
+   <span class="n">output</span><span class="p">(</span><span class="n">MOSFET_direction</span><span class="p">,</span> <span class="n">yellow</span><span class="p">);</span>
+   <span class="n">clear</span><span class="p">(</span><span class="n">MOSFET_port</span><span class="p">,</span> <span class="n">orange</span><span class="p">);</span>
+   <span class="n">output</span><span class="p">(</span><span class="n">MOSFET_direction</span><span class="p">,</span> <span class="n">orange</span><span class="p">);</span>
+   <span class="c1">//</span>
+   <span class="c1">// main loop</span>
+   <span class="c1">//</span>
+   <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+            <span class="n">step_cw</span><span class="p">();</span>
+         
+         <span class="p">}</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span>
+             <span class="n">step_cw</span><span class="p">();</span>
+         <span class="p">}</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+</pre><div style="text-align:right;padding-right:5px;font-size:small;"></div></div>
+</p>
+          <p>This program was able to rotate properly. So, I tried to make a board which can blink corresponding to the roration of the motor. However, As time went by, both LED and rotation became sapping, culminating stopping. After several attemps, I was not able to drive both LED and motor at the same time. That means, it was not able to blink at the exact timing of rotation. However, I have already confirmed the program. </p>
+          <p><strong>Automation</strong></p>
+          <p>For the automation, I used the stepper motor which can drive 5 [V]. However, the problem for automation was to solve the non-fixed motor which can be moved with the rotation.</p>
+          <p align="center"><img src="img/15-altered1.jpg" width="420" height="420"></p>
+          <p align="center"><img src="img/15-screws.jpg" width="420" height="420"></p>
+          <p>So, I altered the design to solidify its motor by using four screws, washers and nuts. </p>
+          <p align="center"><img src="img/15-drives.jpg" alt="" width="420" height="420"></p>
+          <p>One of the most important for making gear of motor is that it must has precise size of its rotation axis. So, I had to alter the design again and again into like this picture.</p>
+          <p align="center"><img src="img/15-motor-gear.png" width="338" height="338"></p>
+          <p>The result of this assembly is:</p>
+          <p align="center"><iframe width="420" height="236" src="//www.youtube.com/embed/8OJj08SceV4" frameborder="0" allowfullscreen></iframe></p>
+          <p align="center"><iframe width="420" height="236" src="//www.youtube.com/embed/ruIYDRjWprw" frameborder="0" allowfullscreen></iframe></p>
+          <p>This time, I was able to check that whole parts rotated well. But the gears were not glued together perfectly, making gears detached from the shafts.</p>
+          <p>To consolidate each parts, I bought screws nuts and a ballbaring for making it easier to be rotated. </p>
+          <p align="center"><img src="img/15-motor-gear.jpg" width="420" height="420"></p>
+          <p align="center"><img src="img/15-gears-motor.jpg" width="420" height="420"></p>
+          <p>The problem on this mechanism was that the screws were slakened due to the vibration of the motor. I thought if the gears were tightened with the nuts, it would transmit the power to the next.  So, I glued the end of each shafts.</p>
+          <p align="center"><img src="img/15-glue.jpg" width="420" height="420"></p>
+          <p align="center"><iframe width="420" height="315" src="//www.youtube.com/embed/3Oz1ulGpSY8" frameborder="0" allowfullscreen></iframe></p>
+          <p>The example of this rotation. Even I used iron shafts and ballbaring, this shaft has tilted due to tiny torelance.</p>
+          <p><strong>Conclusion</strong></p>
+          <p>I tried to design a flip comic machine, and mechanism of it was success. But, there were three problems. First one is the rotation axes. The axes were tilted little bit due to the error at hand assembly. Secondly, there were no mechanisms to fix the axis, making shafts difficult no to be tilted. Hence, this problem will be solved by altering the design. Third one is LED. This time, LED was not able to blink properly at using a motor. Even I used USB for power supply ( 5V and 500mA), LED and motor are not used.        </p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design.html">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations.html">final project presentations</a></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 5: 3D scanning and printing</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p><strong>Abstract</strong></p>
+          <p>I tried to design process of scanning and printing with being similar as a design method of Frank Owen Gehry, the most famous architect in the United States. Hence, I decided to design architecture based on fully cooperation of scanning a ruffled paper and 3D CAD. But, since I was not proficient in 3D printing, I printed out different 3D model as the scanned model. </p>
+          <p><strong>1. Introduction</strong></p>
+          <p>&quot;Spatial Expression&quot; was the most difficult subject at the entrance examination of Waseda Architecture. Our assignment was following steps: Making 3D object based on one A4 paper, drawing a picture of the object, adding our life image into the pictute. I found later that the aim of this subject was to think the relationship between form and function of architectural design. When thinking about this week assignment, I reminded this method. I would like to apply this method to make interesting space or form of an architecture. Also, Frank Owen Gehry, who has been the American top architect for few decades, designs architecture based on the similar method. </p>
+          <p align="center"><img src="img/5-1.jpg" width="300" height="300"></p>
+          <p>Hence, the process of this week's assignment was following clauses. 3D printing, 3D scanning, designing architechture, Printing out arhcitectural model if time is available.          </p>
+          <p><strong>2. 3D printing          </strong></p>
+          <p>I printed out a famous character from Reprecator 2, made by MakerBot. This model can be found at 123D Creature. </p>
+          <p align="center"><img src="img/5-0.jpg" width="300" height="300"></p>
+          <p>MakerBot offers the instructive application for 3D printing named MakerWare. MakerWare is a powerful application for printing out 3D model because it automatically slices the 3D model and executes. </p>
+          <p align="center"><img src="img/5-1_1.jpg" width="300" height="300"></p>
+          <p>After opening MakerWare, we can open STL format file, one of the 3D formats. At this time, the size should be modified because of the diffferent credit between [mm] and [inche]. Before the printing, we must reassure that there are checks at &quot;Support&quot; and &quot;Raft.&quot; The &quot;Raft&quot; was making foundation of 3D model and &quot;Support&quot; indicates the support of structure. c.f. <a href="http://www.makerbot.com/support/makerware/documentation/usage/">How to Use MakerWare</a></p>
+          <p align="center"><img src="img/5-2.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/5-3.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/5-4.jpg" width="300" height="300"></p>
+          <p>One failure occurs at printing out due to the nozzle of 3D printer not being sufficiently worked. If the problem regarding the nozzle, push the filament into 3D printer. </p>
+          <p align="center"><img src="img/5-5.jpg" width="300" height="300"></p>
+          <p>Next trial.</p>
+          <p align="center"><img src="img/5-6.jpg" width="300" height="300"></p>
+          <p>Result.</p>
+          <p align="center"><img src="img/5-7.jpg" width="300" height="300"></p>
+          <p>However, unnecessary parts must be trimmed. </p>
+          <p align="center"><iframe width="300" height="225" src="http://www.youtube.com/embed/S-tdS0vew74" frameborder="0" allowfullscreen></iframe></p>
+          <p>Trimming took about 3 hours (from 12:30 to 15:30 JST)          </p>
+          <p align="center"><img src="img/detteiu.jpg" width="300" height="300"></p>
+          <p><strong>3. 3D scanning</strong></p>
+          <p align="center"><img src="img/5-s.jpg" width="300" height="300"></p>
+          <p>I tried two application: David and 123D Catch.<br/>
+          </p>
+          <p><strong>3.1 David 3D Scanning</strong></p>
+          <p>The system of David consists of the grid of dots, a laser beam and application, which can work from USB memory. FIrstly, open David application at USB memory, and connect a web camera toward PC. Then assemble of the board which suits for the size of object. Calibrate the width of the dots whose number is writen on the board. After the calibration, we can scan the shape of the model by illuminating it by laser beam.</p>
+          <p align="center"><img src="img/5-8.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/5-9.jpg" width="300" height="300"></p>
+          <p>But, this cannot scan the model properly. I guess the point of this tool is that the proper calibration. </p>
+          <p><strong>3.2 123D Catch</strong></p>
+          <p>Next, I tried 123D Catch. 123D Catch is the app for iOS. Due to the feature detection, this application can form a 3D model. The most impressive feature of this application is easy to use. All we must prepare is only iOS terminal. By capturing a number of pictures of object, 123D Catch, maybe in clowd server, calculates the 3D object. </p>
+          <p align="center"><img src="img/5-10.jpg" width="300" height="300"></p>
+          <p>The result of 123D Catch. This app works well.</p>
+          <p><strong>3.3 Trim useless polygons</strong></p>
+          <p>Before designing architecture, trimming the useless polygon is necessary to obtain an useful 3D object. At this point, 123D Catch of Windows version is quite powerful tool for trimming the unnecessary polygons in 3D object. </p>
+          <p align="center"><img src="img/5-trim.jpg" width="300" height="300"></p>
+          <p>By selecting the area, this application removes the irrevalent polygons to a 3D model.</p>
+          <p align="center"><img src="img/5-trimming-end.jpg" width="300" height="300"></p>
+          <p>This is the result of trimming. 123D Catch can output the proper format file with other 3DCAD such as AutoCAD and Rhinoceros. On the web, Meshlab and MeshMixer are the prevailing application for trimming. However, 123D is much easier to trim. Also, the output format of MeshMixer is only MIX format file which has no compatibility with other CAD. </p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

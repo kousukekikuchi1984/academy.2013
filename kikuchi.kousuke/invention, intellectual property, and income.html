@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design.html">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations.html">final project presentations</a></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 16: Principles and Practices, Project management</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p><strong>What I did:</strong></p>
+          <p>1. Tried to make Arduino compatible ATMega board. But failed.</p>
+          <p align="center"><img src="img/f-arko_1.jpg" width="420" height="291"></p>
+          <p>The reason for it was unknown. </p>
+          <p>2. Checked all the sensor and an actuator for the final project with Arduino Hardware and Arduino IDE.</p>
+          <p><strong>2.1 Air Pressure sensor:</strong></p>
+          <p>#include &lt;Wire.h&gt;</p>
+          <p>const int address = 0x60; // address for this sensor</p>
+          <p>float read_coefficients(int total_bits, int fractional_bits, int zero_pad) {<br>
+            unsigned char msb, lsb;<br>
+  <br>
+            msb = Wire.read();<br>
+            lsb = Wire.read();<br>
+  <br>
+            return ((float) ((msb &lt;&lt; 8) + lsb) / ((long)1 &lt;&lt; 16 - total_bits + fractional_bits + zero_pad));<br>
+            }</p>
+          <p>unsigned int read_adc() {<br>
+            unsigned char msb, lsb;<br>
+            msb = Wire.read();<br>
+            lsb = Wire.read();<br>
+  <br>
+            return (((unsigned int)msb &lt;&lt; 8) + lsb) &gt;&gt; 6;<br>
+            } </p>
+          <p>float a0, b1, b2, c12, c11, c22;</p>
+          <p>void setup () {<br>
+            Wire.begin();<br>
+            Serial.begin(9600);<br>
+  <br>
+            Wire.beginTransmission(address);<br>
+            Wire.write(0x04);        // Read coefficient data<br>
+            Wire.endTransmission();<br>
+  <br>
+            Wire.requestFrom(address, 12);  // Request 12 bytes<br>
+            if (Wire.available()) {<br>
+            a0 = read_coefficients(16, 3, 0);<br>
+            b1 = read_coefficients(16, 13, 0);<br>
+            b2 = read_coefficients(16, 14, 0);<br>
+            c12 = read_coefficients(14, 13, 9);<br>
+            c11 = read_coefficients(11, 10, 11);<br>
+            c22 = read_coefficients(11, 10, 15);<br>
+            }<br>
+            }</p>
+          <p>void loop () {<br>
+            Wire.beginTransmission(address);<br>
+            Wire.write(0x12);      // Start both conversions(Pressure and Temperature)<br>
+            Wire.write(0x01);<br>
+            Wire.endTransmission();</p>
+          <p> delay(5);</p>
+          <p> Wire.beginTransmission(address);<br>
+            Wire.write((uint8_t)0x00);  // Read pressure and temperature<br>
+            Wire.endTransmission();</p>
+          <p> Wire.requestFrom(address, 4); // Request 4 bytes</p>
+          <p> if(Wire.available()) {<br>
+            unsigned int Padc = read_adc();<br>
+            unsigned int Tadc = read_adc();<br>
+  <br>
+            float Pcomp = a0 + (b1 + c11 * Padc + c12 * Tadc) * Padc + (b2 + c22 * Tadc) * Tadc;<br>
+            float Pha = Pcomp * 650 / 1023 + 500;<br>
+            Serial.println(Pha);<br>
+            }<br>
+  <br>
+            delay(1000);<br>
+            }</p>
+          <p>&nbsp;</p>
+          <p><strong>2.2 check for temperature and humidity sensor, DHT22</strong></p>
+          <p>#include &lt;DHT22.h&gt;<br>
+            // Only used for sprintf<br>
+          #include &lt;stdio.h&gt;</p>
+          <p>// Data wire is plugged into port 7 on the Arduino<br>
+            // Connect a 4.7K resistor between VCC and the data pin (strong pullup)<br>
+            #define DHT22_PIN 7</p>
+          <p>// Setup a DHT22 instance<br>
+            DHT22 myDHT22(DHT22_PIN);</p>
+          <p>void setup(void)<br>
+            {<br>
+            // start serial port<br>
+            Serial.begin(9600);<br>
+            //Serial.println(&quot;DHT22 Library Demo&quot;);<br>
+            }</p>
+          <p>void loop(void)<br>
+            { <br>
+            DHT22_ERROR_t errorCode;<br>
+  <br>
+            // The sensor can only be read from every 1-2s, and requires a minimum<br>
+            // 2s warm-up after power-on.<br>
+            delay(2000);<br>
+  <br>
+            //Serial.print(&quot;Requesting data...&quot;);<br>
+            errorCode = myDHT22.readData();<br>
+            switch(errorCode)<br>
+            {<br>
+            case DHT_ERROR_NONE:<br>
+            //Serial.print(&quot;Got Data &quot;);<br>
+            Serial.print(myDHT22.getTemperatureC());<br>
+            Serial.print(&quot;,&quot;);<br>
+            Serial.print(myDHT22.getHumidity());<br>
+            Serial.println(&quot;\n&quot;);<br>
+            //Serial.println(&quot;%&quot;);<br>
+            break;<br>
+            case DHT_ERROR_CHECKSUM:<br>
+            Serial.print(&quot;check sum error &quot;);<br>
+            Serial.print(myDHT22.getTemperatureC());<br>
+            Serial.print(&quot;C &quot;);<br>
+            Serial.print(myDHT22.getHumidity());<br>
+            Serial.println(&quot;%&quot;);<br>
+            break;<br>
+            case DHT_BUS_HUNG:<br>
+            Serial.println(&quot;BUS Hung &quot;);<br>
+            break;<br>
+            case DHT_ERROR_NOT_PRESENT:<br>
+            Serial.println(&quot;Not Present &quot;);<br>
+            break;<br>
+            case DHT_ERROR_ACK_TOO_LONG:<br>
+            Serial.println(&quot;ACK time out &quot;);<br>
+            break;<br>
+            case DHT_ERROR_SYNC_TIMEOUT:<br>
+            Serial.println(&quot;Sync Timeout &quot;);<br>
+            break;<br>
+            case DHT_ERROR_DATA_TIMEOUT:<br>
+            Serial.println(&quot;Data Timeout &quot;);<br>
+            break;<br>
+            case DHT_ERROR_TOOQUICK:<br>
+            Serial.println(&quot;Polled to quick &quot;);<br>
+            break;<br>
+            }<br>
+            }</p>
+          <p>&nbsp;</p>
+          <p><strong>2.3 CO2 Sensor</strong></p>
+          <p>#define R 11 //led RED<br>
+            #define L 12 //led YELLOW 1<br>
+            #define G 13 //led GREEN<br>
+            #define K 10 //led YELLOW 2<br>
+            #define PIN 0 //analog PIN wired to co2 sensor<br>
+          #define SOGLIA 1000 // 1000ppm OK value</p>
+          <p>unsigned int lettura = 0; //actual read value<br>
+            unsigned int letturaOld = 0; //old read value<br>
+            unsigned long time;</p>
+          <p>void reading(){ //led blinking while reading<br>
+            digitalWrite(R, LOW);<br>
+            digitalWrite(K, LOW);<br>
+            digitalWrite(G, LOW);<br>
+            int cont = 0;<br>
+            while (cont &lt; 15){<br>
+            digitalWrite(L, HIGH);<br>
+            delay(500);<br>
+            digitalWrite(L, LOW);<br>
+            delay(500);<br>
+            cont++;<br>
+            } <br>
+            }</p>
+          <p>void victory(){ //led blinking when SOGLIA read<br>
+            digitalWrite(R, LOW);<br>
+            digitalWrite(G, HIGH);<br>
+            int cont = 0;<br>
+            while (cont &lt; 15){<br>
+            digitalWrite(L, HIGH);<br>
+            digitalWrite(K, LOW);<br>
+            delay(500);<br>
+            digitalWrite(L, LOW);<br>
+            digitalWrite(K, HIGH);<br>
+            delay(500);<br>
+            cont++;<br>
+            } <br>
+            }</p>
+          <p>void rightWay(){ //led blinking when lettura &lt; letturaOld<br>
+            digitalWrite(R, LOW);<br>
+            digitalWrite(K, LOW);<br>
+            digitalWrite(G, HIGH);<br>
+            int cont = 0;<br>
+            while (cont &lt; 15){<br>
+            digitalWrite(L, HIGH);<br>
+            delay(500);<br>
+            digitalWrite(L, LOW);<br>
+            delay(500);<br>
+            cont++;<br>
+            } <br>
+            }</p>
+          <p>void wrongWay(){ //led blinking when lettura &gt; letturaOld<br>
+            digitalWrite(R, HIGH);<br>
+            digitalWrite(K, LOW);<br>
+            digitalWrite(G, LOW);<br>
+            int cont = 0;<br>
+            while (cont &lt; 15){<br>
+            digitalWrite(L, HIGH);<br>
+            delay(500);<br>
+            digitalWrite(L, LOW);<br>
+            delay(500);<br>
+            cont++;<br>
+            } <br>
+            }</p>
+          <p>void setup(){<br>
+            pinMode(PIN, INPUT);<br>
+            pinMode(R, OUTPUT);<br>
+            pinMode(L, OUTPUT);<br>
+            pinMode(G, OUTPUT);<br>
+            pinMode(K, OUTPUT);<br>
+            Serial.begin(9600);<br>
+            }</p>
+          <p>void loop(){<br>
+            time = millis();<br>
+            if ( time &lt;= 300000) {  //5 minutes heating time<br>
+            digitalWrite(R, HIGH);<br>
+            digitalWrite(L, HIGH);<br>
+            digitalWrite(K, HIGH);<br>
+            digitalWrite(G, HIGH);<br>
+            letturaOld = analogRead(PIN); //keeps on reading<br>
+            letturaOld = map(letturaOld,0,1023,350,10000);<br>
+            Serial.print(time/1000);<br>
+            Serial.println(&quot; seconds elapsed. Heating in progress...&quot;);<br>
+            delay(10000);<br>
+            }<br>
+            else if ( time &gt; 300000 &amp;&amp; time &lt; 305000 ) { // leds off<br>
+            digitalWrite(R, LOW);<br>
+            digitalWrite(L, LOW);<br>
+            digitalWrite(K, LOW);<br>
+            digitalWrite(G, LOW);<br>
+            }<br>
+            else{<br>
+            //blinking YELLOW led while reading<br>
+            reading();<br>
+            delay(1500);<br>
+            lettura = analogRead(PIN);<br>
+            lettura = map(lettura,0,1023,350,10000);<br>
+            Serial.print(&quot;Old Value: &quot;); //old reading<br>
+            Serial.print(letturaOld);<br>
+            Serial.print(&quot; | New Value: &quot;); //new reading<br>
+            Serial.println(lettura);<br>
+            if ( lettura &lt; SOGLIA ){<br>
+            victory(); //we're done! ding ding ding!<br>
+            delay(1500);<br>
+            }<br>
+            else{<br>
+            if (lettura &lt; letturaOld) <br>
+            rightWay();<br>
+            else <br>
+            wrongWay();<br>
+            }<br>
+            letturaOld = lettura;<br>
+            lettura = 0;<br>
+            delay(1500);<br>
+            }<br>
+            }</p>
+          <p><strong>2.4 Moisture Sensor</strong></p>
+          <p>const int VAL_PROBE = 3; // Analog pin 0<br>
+            <br>
+            void setup() {<br>
+Serial.begin(9600);<br>
+}<br>
+<br>
+void LedState(int state) {<br>
+digitalWrite(13, state);<br>
+}<br>
+<br>
+void loop() {<br>
+int moisture = analogRead(VAL_PROBE);<br>
+<br>
+Serial.println(moisture);<br>
+delay(1000);<br>
+}</p>
+          <p><strong>2.5 Light sensor</strong></p>
+          <p>float lux0 = 0;</p>
+          <p>void setup(){<br>
+            Serial.begin(9600);<br>
+            }</p>
+          <p>void loop(){<br>
+            int in = analogRead(1);<br>
+            float ar0 = (in * 5.0/1024)/10.0;<br>
+            lux0 = (20.0/0.01) * ar0;<br>
+  <br>
+            Serial.println(lux0);<br>
+  <br>
+            delay(1000);<br>
+            }</p>
+          <p><strong>2.6 Thermistor</strong></p>
+          <p>// constants<br>
+            const float B = 3380;<br>
+            const float Rr = 10.0;<br>
+            const float Rt = 10.0;<br>
+            const float Tk = 298.15;<br>
+          </p>
+          <p>void setup(){<br>
+            Serial.begin(9600);<br>
+            }</p>
+          <p>void loop(){<br>
+            int n = analogRead(2);<br>
+  <br>
+            float rr1 = Rr * n / (1024.0 - n);<br>
+            float t = 1/(log(rr1/Rt)/B + (1/Tk));<br>
+            float cel = t - 273.15;<br>
+            Serial.println(n);<br>
+            Serial.println(cel);<br>
+  <br>
+            // convert from 25 degree<br>
+            float temp = 25.0 - cel;<br>
+            float temperature = 25.0 + temp;<br>
+  <br>
+            Serial.println(temperature);<br>
+  <br>
+            delay(1000);<br>
+            }</p>
+          <p>&nbsp;</p>
+          <p><strong>3. Checked I2C communication between two Arduino boards.</strong></p>
+          <p align="center"><iframe width="420" height="236" src="//www.youtube.com/embed/Q_iJxxDaZIs" frameborder="0" allowfullscreen></iframe></p>
+          <p><strong>3.1 Master Node Program </strong></p>
+          <p>// Wire Master Writer<br>
+          // by Nicholas Zambetti &lt;http://www.zambetti.com&gt;</p>
+          <p>// Demonstrates use of the Wire library<br>
+            // Writes data to an I2C/TWI slave device<br>
+            // Refer to the &quot;Wire Slave Receiver&quot; example for use with this</p>
+          <p>// Created 29 March 2006</p>
+          <p>// This example code is in the public domain.<br>
+          </p>
+          <p>#include &lt;Wire.h&gt;</p>
+          <p>void setup()<br>
+            {<br>
+            Wire.begin(); // join i2c bus (address optional for master)<br>
+            Serial.begin(9600);<br>
+            }</p>
+          <p>byte x = 0;</p>
+          <p>void loop()<br>
+            {<br>
+            Wire.beginTransmission(4); // transmit to device #4<br>
+            Wire.write(&quot;Hello, Transmitter:: &quot;);        // sends five bytes<br>
+            Wire.write(x);              // sends one byte <br>
+            Wire.endTransmission();    // stop transmitting<br>
+            Serial.print(&quot;This is Master Arduino:: &quot;);<br>
+            Serial.print(x);<br>
+            Serial.println(&quot; times&quot;);<br>
+            x++;<br>
+            delay(3000);<br>
+            }</p>
+          <p><strong>3.2 Slave Node Program</strong></p>
+          <p>// Wire Slave Receiver<br>
+          // by Nicholas Zambetti &lt;http://www.zambetti.com&gt;</p>
+          <p>// Demonstrates use of the Wire library<br>
+            // Receives data as an I2C/TWI slave device<br>
+            // Refer to the &quot;Wire Master Writer&quot; example for use with this</p>
+          <p>// Created 29 March 2006</p>
+          <p>// This example code is in the public domain.<br>
+          </p>
+          <p>#include &lt;Wire.h&gt;</p>
+          <p>void setup()<br>
+            {<br>
+            Wire.begin(4);                // join i2c bus with address #4<br>
+            Wire.onReceive(receiveEvent); // register event<br>
+            Serial.begin(9600);           // start serial for output<br>
+            }</p>
+          <p>void loop()<br>
+            {<br>
+            delay(100);<br>
+            }</p>
+          <p>// function that executes whenever data is received from master<br>
+            // this function is registered as an event, see setup()<br>
+            void receiveEvent(int howMany)<br>
+            {<br>
+            while(1 &lt; Wire.available()) // loop through all but the last<br>
+            {<br>
+            char c = Wire.read(); // receive byte as a character<br>
+            Serial.print(c);         // print the character<br>
+            }<br>
+            int x = Wire.read();    // receive byte as an integer<br>
+            Serial.println(x);         // print the integer<br>
+            }</p>
+          <p>&nbsp;</p>
+          <p><strong>4. What should I do for the final project:</strong></p>
+          <p>1. Making Arduino-compatible ATMega328P-AU board.</p>
+          <p>2. Designing a sensor node shield for a plant and LCD shield for display.</p>
+          <p>3. Connecting with LCD node until 24.</p>
+          <p>4. Displaying Ascii Art Face corresponding to enviroment of plant.</p>
+          <p>5. 3D design should be done after the determination of electronics design.        </p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

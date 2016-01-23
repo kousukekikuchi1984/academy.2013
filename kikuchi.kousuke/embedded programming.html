@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+	  p.program{font-family:"Courier New", Courier, monospace}
+	  
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations">final project presentations</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 8: Embeded Programming</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p><strong>1. Introduction</strong></p>
+          <p>Embeded programming is a programming of micro controller for hardware. This week's assignment was making programs for the circuit we have already made as many languages as possible. Hence I tried these Languages: </p>
+          <p> Arduino<br>
+C Language<br> 
+Ruby(mruby)
+</p>
+          <p>However, at uploading a boot file via FabISP, two problems were found.</p>
+          <p><strong>2. Problems</strong></p>
+          <p>When I used the FabISP which I made, Arduino could not burn the bootloader of my circuit. The error code was:</p>
+          <p class="program">avrdude: initialization failed, rc=-1<br/>
+          Double check
+            connections and try again, or use -F to override this check.
+          </p>
+          <p>Then I connected the circuit with AVRISP mkII, the signal was green. Indeed, there might not be problem on circuit. Although I also used AVRISP mkII for burning the bootloader via arduino, its attempt was failed. The error of arduino was:</p>
+          <p class="program">arvdude: stk500v2_command(): command failed<br/>
+          arvdude: stk500v2_program_enable(): bad AVRISPmkII connection status: SCK fail<br/>
+          Double check connections and try again, or use -F to override this check. </p>
+          <p>Also, when I checked the FabISP based on AVRISP mkII, the signal remained red, even though Mac OS's system profiler can detect it.          </p>
+          <p>To sum up, the problems were</p>
+          <p>1. There might be a wrong connection in the circuit especially at around SCK (because even AVRISP failed uploading).<br/>
+          2. There might be a something wrong in my FabISP (because AVRISP signaled red)</p>
+          <p>To solve the problems:</p>
+          <p>1. I used AVRISP mkII instead of my FabISP. I will verify the FabISP with my collegue.<br/>
+            2. Re-soldering the circuit especially near SCK wire.
+          </p>
+          <p align="center"><img src="img/8-board.jpg" width="300" height="300"></p>
+          <p>After checking my circuit and schematic, I found there was electronic leak between SCK and MISO. But, there is no bridge between both pins. As a result, I thought there was a leak below the Attiny44.</p>
+          <p align="center"><img src="img/8-leakage.jpg" width="300" height="300"></p>
+          <p>For removal of Attiny44, I used <a href="https://www.sparkfun.com/products/10925">Chipquik SMD Removal Kit</a>. After the removal, I found there remained cupper between both pin.</p>
+          <p align="center"><img src="img/8-error.jpg" width="300" height="300"></p>
+          <p>I forgot to take the picture of it. but this was a board before soldering. As we can see from this picture, electronic leal was due to the connection. After separating both pins, I re-solder an Attiny44.</p>
+          <p><strong>3. Arduino</strong></p>
+          <p>ledPin = 7;<br/>buttonPin = 3;</p>
+          <p align="center"><img src="img/8-arduino.jpg" width="300" height="332"></p>
+          <p align="center">
+          <iframe width="300" height="169" src="http://www.youtube.com/embed/fMU-AaQlI7Y" frameborder="0" allowfullscreen></iframe></p>
+          <p>it worked well!</p>
+          <p><strong>4. C language</strong></p>
+          <p>I followed an instruction of <a href="http://www.obdev.at/products/avrmacpack/index.html">CrossPack for AVR Development</a>. Since CrossPack for AVR Development was installed at Electronics Production, I commanded.</p>
+          <p class="program">$ cd /Users/kousukekikuchi/Desktop/hello.blink <br>
+            $ avr-project hello.blink<br>
+          Using template: /usr/local/CrossPack-AVR-20130212/etc/templates/TemplateProject</p>
+          <p>This  command could xcodeproject file and c and make file at firmware directory. At hello.blink.c, I programed:</p>
+          <p class="program">#include &lt;avr/io.h&gt;<br>
+          #include &lt;util/delay.h&gt;</p>
+          <p class="program">int main(void)<br>
+            {<br>
+            DDRD = 1 &lt;&lt; 7;           /* make the LED pin an output */<br>
+            for(;;){<br>
+            char i;<br>
+            for(i = 0; i &lt; 10; i++){<br>
+            _delay_ms(30);  /* max is 262.14 ms / F_CPU in MHz */<br>
+            }<br>
+            PORTD ^= 1 &lt;&lt; 7;    /* toggle the LED */<br>
+            }<br>
+            return 0;               /* never reached */<br>
+          }</p>
+          <p>And I modified Makefile by following instruction:</p>
+          <p class="program">DEVICE     = attiny44<br>
+            CLOCK      = 20000000<br>
+            PROGRAMMER = #-c avrisp2 -P usb<br>
+            OBJECTS    = main.o<br>
+          FUSES      = -U hfuse:w:0xd9:m -U lfuse:w:0x24:m</p>
+          <p>But at Make, there were errors that DDRD and PORTD were not declered. But I modifed DDRA and PORTA, it could be compiled.</p>
+          <p class="program">avrdude -p attiny44 -c avrispmkII -e U flash:w:main.hex</p>
+          <p>But the error was </p>
+          <p class="program">avrdude: ser_open(): can't open device &quot;unknown&quot;: No such file or directory</p>
+          <p>I guess this error was from &quot;Port&quot; which was not specified at c and make files. So, I changed shell</p>
+          <p class="program">$ avrdude -p attiny44 -c avrisp2 -P usb -e U flash:w:main.hex<br/>
+          avrdude: AVR device initialized and ready to accept instructions<br/>
+          Reading | ################################################## | 100% 0.00s<br/>
+          avrdude: Device signature = 0x1e9207<br>
+            avrdude: erasing chip<br/>
+            avrdude: safemode: Fuses OK<br/>
+            avrdude done.  Thank you.</p>
+          <p>This program did not work well. By looking at LED blink example at<a href="http://shokai.org/blog/archives/tag/avr-gcc"> Hashimoto Shokai</a>, I could find a good example. I modified a main.c file:</p>
+          <p class="program">#include &lt;avr/io.h&gt;<br>
+            #include &lt;util/delay.h&gt;<br>
+            #define sbi(BYTE,BIT) BYTE|=_BV(BIT)<br>
+          #define cbi(BYTE,BIT) BYTE&amp;=~_BV(BIT)<br/><br/>int main(void)<br>
+            {<br>
+            DDRA = _BV(PORTA7);<br>
+            while (1){<br>
+            //PORTA ^= _BV(PORTA7);<br>
+            sbi(PORTA, PA7);<br>
+            _delay_ms(1000);<br>
+            cbi(PORTA, PA7);<br>
+            _delay_ms(1000);<br>
+            }<br>
+            }</p>
+          <p>After compling this file, I uploaded .hex file into the circuit and this circuit blinked well. This file I also tried uploading method without Makefile. Firstly, I compiled <span class="program">hello.ftdi.44.echo.c</span>, and made hex file. Lastly, arvdude could upload this execution file. Here is my script.</p>
+          <p class="program">$ avr-gcc -mmcu=attiny44 -Wall -Os -DF_CPU=20000000 -I./ -o hello.ftdi.44.echo.out hello.ftdi.44.echo.c<br>
+            $ avr-objcopy -j .text -O ihex hello.ftdi.44.echo.out hello.ftdi.44.echo.hex<br>
+          $ avrdude -p attiny44 -P usb -c avrispmkii -e -U flash:w:hello.ftdi.44.echo.hex</p>
+          <p class="program">avrdude: AVR device initialized and ready to accept instructions</p>
+          <p class="program">Reading | ################################################## | 100% 0.00s</p>
+          <p class="program">avrdude: Device signature = 0x1e9207<br>
+            avrdude: erasing chip<br>
+            avrdude: reading input file &quot;hello.ftdi.44.echo.hex&quot;<br>
+            avrdude: input file hello.ftdi.44.echo.hex auto detected as Intel Hex<br>
+            avrdude: writing flash (826 bytes):</p>
+          <p class="program">Writing | ################################################## | 100% 0.29s</p>
+          <p class="program">avrdude: 826 bytes of flash written<br>
+            avrdude: verifying flash memory against hello.ftdi.44.echo.hex:<br>
+            avrdude: load data flash data from input file hello.ftdi.44.echo.hex:<br>
+            avrdude: input file hello.ftdi.44.echo.hex auto detected as Intel Hex<br>
+            avrdude: input file hello.ftdi.44.echo.hex contains 826 bytes<br>
+            avrdude: reading on-chip flash data:</p>
+          <p class="program">Reading | ################################################## | 100% 0.24s</p>
+          <p class="program">avrdude: verifying ...<br>
+            avrdude: 826 bytes of flash verified</p>
+          <p class="program">avrdude: safemode: Fuses OK</p>
+          <p class="program">avrdude done.  Thank you.          </p>
+          <p>But, <u>this hello.ftdi.44.echo.c did not work. Even though I sent a message to the board, it never responded</u>. I do not understand the reason. </p>
+          <p><strong>5. mruby</strong></p>
+          <p>mruby is Ruby language for embeded programming. Ruby has been basically used for Web Development due to Ruby on Rails. Since Ruby is the first language I learned, I tried to embedded program based on mruby. </p>
+          <p>mruby can be attained from <a href="https://github.com/mruby/mruby">Matz's Git</a>, who is the inventor of Ruby. After downloading program, move to the directory, and make.</p>
+          <p>After make, &quot;bin,&quot; &quot;lib&quot; and &quot;include&quot; were engendered. cd bin. I made a test program like this:</p>
+          <p class="program">puts &quot;Hello World!&quot;<br/>
+            a = 1<br/>
+          p a + 4
+          </p>
+          <p>&quot;puts&quot; same as System.out.println(&quot;Hello World&quot;); in Java and std::cout &lt;&lt; &quot;Hello World&quot; &lt;&lt; endl; in C++. After type &quot;./mrbc mrbc_test.rb,&quot; &quot;mruby_test.mrb&quot; was generated. The code of mrb format file was output Rite binary file.</p>
+          <p align="center"><img src="img/8-mruby.jpg" width="300" height="308"> </p>
+          <p class="program">$ ./mruby -b mrbc_test.mrb<br>
+            hello world<br>
+          5</p>
+          <p>It worked. But I do not understand how to program the Blink LED to the board. <a href="http://avr.paslog.jp/category/147689.html">This homepage</a> shows a great example of mruby.          </p>
+          <p>6. Applendix</p>
+          <p>I reconfirmed my FabISP after modifying the short of circuit. It worked properly. But, the problem on the hello.echo.c remained. Even after the upload of hello.ftdi.44.echo.c.hex to the board, it did not respond.</p>
+          <p>MIT CBA FAB: <a href="http://fab.cba.mit.edu/content/tools/file/microcontrollers/compiling.html">Compiling and Uploading Microcontroller Programs</a></p>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

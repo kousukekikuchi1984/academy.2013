@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations">final project presentations</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 4: Electronics Production</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p>This week's assignment was that making In-System Programing based on AVR processor. My cognition of this system is similar one as Arduino. If I am wrong, please notify me. This process of making ISP consisted of three processes: engraving circuit, soldering, uploading a firmware via AVR controller.</p>
+          <p><strong>1. Engraving circuit</strong><br>
+          Hacking via Fab Modules is the easiest way to hollow circuit board. But, the RC232 to USB converter by StarTech is required. Since we do not have that one, I use normal converter and &quot;Dr. Engrave&quot; which is native software of Rolland. </p>
+          <p><strong>1.1 Designing electronic circuit at EAGLE.</strong><br>
+            EAGLE is the free software which can be downloaded from this web site. Although most PCB can have multi-layered circuit, the schematic of circuit must be designed with ONE layer of the board. After output LINE layer and the CUT layer with png format files. However, I do not have enough time to design the circuit, I used FabISP44.</p>
+          <p><strong>1.2 Loading LINE png format file and executing</strong><br>
+            We must prepare the circuit board with a sacrifice board attached to the Modela's board. </p>
+          <p align="center"><img src="img/4-2.jpg" width="300" height="300"></p>
+          <p>Open &quot;Dr. Engrave&quot; and load the picture. After set the pitch as 0.1[mm], Dr. Engrave can automatically calculate the path of Modela. We must change the 1/64 inches end mill before the Z-axis calibration. Although we must set Z-axis original point, it is very difficult to set Z=0 as the surface of board. Hence, I did like this.</p>
+          <p align="center"><img src="img/4-1.jpg" width="300" height="300"></p>
+          <p>I loosened the end mill screw and it fell to Z=0 based on gravity!<br>
+            After the calibration, the depth of engraving is set up. In my case, I set the depth of engraving as 0.15[mm] and pitch of it was 0.10[mm]. In Fab Modules, 0.10[mm] is the recommended depth, however I found hollowing little bit more than Fab Modules standard is easier at soldering than 0.15[mm] of engraving. EXECUTION!</p>
+          <p><strong>1.3 Cut the circuit</strong><br>
+          To cut down the circuit, draw the rectangle which is bigger than the circuit. We must change the 1/32 inches end mill and set 2.0[mm] for depth of engraving.</p>
+          <p><strong>1.4 Accidents</strong><br>
+            I failed 4 times at making circuit. The problems of the failure are non-flat circuit board and no-proper calibration. Also, minor incident is the path of the end mill is not properly illustrated. So, user should check these points.</p>
+          <p align="center"><img src="img/4-3.jpg" width="300" height="300"></p>
+          <p><strong>1.5 Tips</strong><br>
+          Engraving circuit takes about one to two hours. If there is no one to use Modela, novice should engrave other circuit for soldering accidents.</p>
+          <p>Also, if we try to stop the engraving, we must push &quot;view&quot; button of Modela, then delete its output file which remained at computer. After pushing both &quot;up&quot; and &quot;down&quot; buttons, pull out the USB connector of Modela. After stop brinking the light of &quot;view,&quot; insert USB connector. Modela is ready for moving.</p>
+          <p><strong>2. Soldering<br>
+          2.1 All parts used in FabISP</strong><br>
+          Resisters:<br>
+100 [&#937;] x 2<br>
+499[&#937;] x 1<br>
+1[k&#937;] x 1<br>
+0[&#937;] x 1 ( which can be used as Jumper <br>
+Resister can deteriorate the flow of electricity.</p>
+          <p>Capacitors (We call Capacitor as Condenser):<br>
+            1[&#956;F] x 1<br>
+            10[pF] x 2<br>
+          </p><p>Cristal:<br>
+            20[MHz] x 1<br>
+            These parts can not have polarity. Accoding to web page, this material can </p>
+          <p>AVR microcomputer:<br>
+            AVR ATtiny44 x 1<br>
+            There is a circle on the top which is the sign of polarity. </p>
+          <p>Diodes:<br>
+            3.3[V] x 2<br>
+            Diodes allow electricity flow only one way. When we look the details of it, we can find a line on the top, On this side electricity flows to the other side.          </p>
+          <p><strong>2.2 Required items</strong><br>
+            Required items at soldering is shown below.<br>
+            sharpen soldering iron<br>
+            narrow solder<br>
+            copper mesh which sucks up liquid solder.<br>
+            pinset</p>
+          <p><strong>2.3 Soldering</strong><br>
+            Soldering with tiny parts is quite difficult for novice. In fact, I failed to solder twice. The minutiae of the problems is shown below. </p>
+          <p>Over consumption of solder will decrease the chance to recover from the failure and induce over heating on copper. Over heating of copper will detach copper from the board. That board will not be available for the circuit because copper was electoronically separated from the circuit.</p>
+          <p>To avoid this problem, proper use of solder and a solder iron should be done. In my case, I found the knack of tiny soldering. I melted a bit of solder in one place and placing the parts on it. Melting solder enabled the parts consolidate to the board. After that, I soldered the other sides.</p>
+          <p><strong>2.4 Accidents</strong><br>
+            Wrong connection of AVR. </p>
+          <p align="center"><img src="img/4-4.jpg" width="300" height="300"></p>
+          <p>Tear down the circuits.          </p>
+          <p align="center"><img src="img/4-5.jpg" width="300" height="300"></p>
+          <p>All trials. </p>
+          <p align="center"><img src="img/4-6.jpg" width="300" height="300"></p>
+          <p><strong>3. Uploading firmware</strong><br>
+          The process to upload the firmware to AVR consists of three steps: test of th ecircuit, AVR programing libraries and uploading.</p>
+          <p><strong>3.1 Test of circuit</strong><br>
+  After the connection of AVR controller and USB into FabISP, the AVR controller indicate the status from the color of light. Green is good, yellow means something wrong with power socket. Red light indicates there is significant problem on the circuit which includes short circuit, cold joint.</p>
+          <p align="center"><img src="img/4-7.jpg" width="300" height="300"></p>
+          <p><strong>3.2 Installing related applications</strong><br>
+If we verify the connectivity of the circuit, AVR related program should be installed. The system requirements for AVR programming are gcc, Avrduve.<u> I tried to install via MacPorts, but my attempt was failed. I basically used native application of gcc, and installed its related files.</u></p>
+          <p><strong>3.3 Uploading firmware</strong><br>
+  Firstly, the firmware can be downloaded from the <a  href="http://academy.cba.mit.edu/classes/electronics_production/index.html">web page</a>. Move to the downloaded directory, and make files.</p>
+          <p>make clean</p>
+          <p>make hex</p>
+          <p>sudo make fuse</p>
+          <p>sudo make program</p>
+          <p>If there is no error regarding this fimware, Mac user can check the FabISP from the system profiler.          </p>
+          <p><strong>4. But</strong><br>
+I found later I forgot to solder the diodes on this FabISP, but it works. Why?</p>
+          <p align="center"><img src="img/4-8.jpg" width="300" height="300"></p>
+          <p><strong>Caveat about the diodes used in FabISP</strong><br>
+          </p>
+          <p align="center"><img src="http://academy.cba.mit.edu/classes/embedded_programming/hello.ISP.44.png" width="300"></p>
+          <p>(Feb 18, 2013) <strong>My hypothesis</strong>
+          <p><s>The diodes which I forgot to solder prevent undesirable electronic flow into PC which might culminate in breaking computer.With diodes near USB connector, they can prevent the flow of electricity because of the diode polarity which only allows the electronic flow from one side to the other. From this schematic, diodes can flow electricity from C to A which means Ground. If there are no diodes, electornic directly proceed to computer. FabISP can be worked without the diodes near USB pin, entailing the risk of breakdown of PC. So, I strongly recommend to solder the diodes near connector.</s></s></p>
+          <p>(Feb 19, 2013) <strong>Advice from Joel, FabLab Manchestor</strong></p>
+          <p><u>These diodes can decrease the voltage from original USB voltage 5.0 [V] to 3.3[V] whose voltage is suitable for AVR</u>. AVR requires 2.0 to 3.6[V], but some of the AVR allow over 5.0[V] of electricity. My AVR ATtiny44 permitted 5.0[V], so, I can upload the bootloader to AVR. Other AVR controller might be clashed due to the overflow.</p>
+          <p>However, most AVR controllers require less voltage than usual USB power suply. Hence, a decrease of voltage should be implemented. <u>The diodes used in this schematic are so-called as Zenner Diode, which flows electricity with certain voltage.</u> In this case, by placing 3.3[V] Zenner diodes near USB power supply, reduction of voltage can be achieved. As a result, AVR can attain enough power to work!</p>
+          <p>Thanks to<br/>
+            <a href="http://vusb.wikidot.com/hardware">A Firmware-Only USB Driver for the AVR</a><br/>
+          Joel Rae, FabLab Manchester</p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

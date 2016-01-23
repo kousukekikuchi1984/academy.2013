@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design.html">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations.html">final project presentations</a></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 13: Output Devices</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p>Summary: 8x7 Charlieplexing LED Array</p>
+          <p>All the files can be found at <a href="https://github.com/kousukekikuchi/FabAcademy.2013">my GitHub</a></p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/D5nOchEMOcg" frameborder="0" allowfullscreen></iframe></p>
+          <p>Some of the LED could not blink.</p>
+          <p><strong>Introduction</strong></p>
+          <p>When I saw this week's assignment, I came to my mind regarding two things: Kinetic Architecture and LED Array.</p>
+          <p align="center"><iframe width="450" height="338" src="http://www.youtube.com/embed/4OHXE6omfoA" frameborder="0" allowfullscreen></iframe>
+            Okayama LRT Competition designed by sharisharishari
+          </p>
+          <p>Kinetic Architecture is the notion that architecture can move based on sensoring and actuating system. My idea to this was to assemble Origami such as Miura Map Fold and Diamond Cut [1] to determine the shape of architecture. I got Electroactive polymers for this purpose. But after I read the data sheet, I found it would be failed because this actuator could contract only 5% of its length at most. </p>
+          <p>Next, Charlieplexing LED Cube</p>
+          <p align="center"><iframe width="451" height="338" src="http://www.youtube.com/embed/6mXM-oGggrM" frameborder="0" allowfullscreen></iframe></p>
+          <p>I was completely fascinated with LED Cube. But, since I did not have enough skill of Charlieplexing, firstly, I learned the basic of it. Then, made LED matrix as big as possible with ATtiny84.</p>
+          <p>Methods</p>
+          <p>Checking the mechanism of Charlieplexing</p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/sj008NGCQi4?list=UUjkIFfgnnTMzgpIIViezWFg" frameborder="0" allowfullscreen></iframe></p>
+          <p>One pin outputs HIGH, the other pin outputs LOW. Current flows from HIGH to LOW, so the LED with the same direction with the current was able to blink. Based on this method, we can decrease the number of pins for LEDs.          </p>
+          <p align="center"><img src="img/12-board.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/12-board2.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/12-solder_buttom.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/12-shinjuku.jpg" width="450" height="450"></p>
+          <p align="center">Shinjuku. from my Lab. for change of pace....</p>
+          <p align="center"><img src="img/12-wrong.jpg" width="300" height="300"></p>
+          <p align="center">I found GND pin was not connected.</p>
+          <p align="center"><img src="img/12-succcess.jpg" width="300" height="300"></p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/39T92eyBYLA?list=UUjkIFfgnnTMzgpIIViezWFg" frameborder="0" allowfullscreen></iframe></p>
+          <p>I found the blinking is quite different from the tutorial. Since in Neil's example, the pins were connected to ROWs, on the other hand, mines were connected to LINEs. So, I changed function named flush into         </p>
+          <p>void flash(uint8_t to, uint8_t from, uint8_t delay)          And, it worked. But the problem is some LED did not blink at all, and other blink even though the program did not instruct for it to blink.</p>
+          <p><strong>Problems for final project</strong></p>
+          <p>My first idea is to make robot which can notify us confortable area in a room based on a number of sensor nodes. However, location detection was quite difficult for the robot.          </p>
+          <p>The one of the other idea was to make Infrared LED Array to feel heat spot of Location Based Social Networks, not visualize it, as my profession is strongly related with this study. But, this week's assingment was enough for me to be disappointed with my idea. Firstly, soldering of all-well-ordered LEDs is quite difficult. I have tried, but mine was very rough. Secondly, the controll and schematics of LEDs is enough difficult to make errors at assembling.</p>
+          <p>Kinetic Architecture was fascinating to me. But the shape of the architecture must be determined by environment. I have no idea about evaluation and algorithm of kinetic architecture.</p>
+          <p>&nbsp;</p>
+          <p>[1] Jun Miura, Origami Research Note (2012.7.24) retrieved from http://mitani.cs.tsukuba.ac.jp/origami/ at 2013.4.24</p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

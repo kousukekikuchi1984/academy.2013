@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+	  p.program{font-family:"Courier New", Courier, monospace}
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design.html">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations.html">final project presentations</a></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 10: Input Devices</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p><strong>This week's assignment summary:          </strong></p>
+          <p>Assemblying humidity and temperature sensors to calculate confort in some area,</p>
+          <p>&nbsp;</p>
+          <p><strong>1. Introduction</strong></p>
+          <p>For my final project, I have wanted to make a robot which can notice us a confortable area. As I surmise from my view, the robot would use a lot of pins: temperature, humidity, output devices, also LEDs which should be needed for checking circuit. When I looked at the examples of both &quot;fab academy&quot; and &quot;how to make almost anything,&quot; Attiny45 were basically used for the circuits. However, since I would like to try a main calculation of comfort, this week I continued to use Attiny44 which had been on the failed board. </p>
+          <p>Sensoring environment, smart house and smart city are the most focus point in architectural discipline. Once, I colaborated with <a href="http://www.tus.ac.jp/en/fac/p/index.php?6370">Atsushi Enta</a>, an Assistant Professor at The Science University of Tokyo, and <a href="http://njun.jp">Jun Nakagawa</a>, <a href="http://www.academia.edu/2124419/Fundamental_research_on_architectural_monitoring_system_collaborate_with_Arduino_Pachube_and_Sketchup_in_Japanese_">an architect at Levi Archiecture</a>, about sensoring and visualizing [1].</p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/Qf5sED5Ns0M?list=UUjkIFfgnnTMzgpIIViezWFg" frameborder="0" allowfullscreen></iframe></p>
+          <p>The sensored data was transmitted to Cosm (Pachube at that time), and Sketch Up Web Console sent query to Cosm server to attain data, and altered the color of area in relation to the temperature.</p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/4_mtrW7d3nc?list=UUjkIFfgnnTMzgpIIViezWFg" frameborder="0" allowfullscreen></iframe></p>
+          <p> But I could not understand the arduino and its related circuit of an environmental sensor. Hence, this time I tried to know the skill of environmental sensoring.</p>
+          <p><strong>2. Designing and Making own sensor node</strong><br/>
+            <strong>2.1 Buying Sensors and necesities of Attiny44
+          </strong></p>
+          <p>I went to Akihabara to buy sensors and necesities, and bought interesting sensors:</p>
+          <p align="center"><img src="img/10-thermo-humid-sensor.jpg" width="300" height="300"></p>
+          <p>Humidity and Temperature sensor. John Rees at Barcelona noticed me that this sensor costs around $5 in U.S. But I bought it around 1300 yen ($15). I would like to try this one this time!</p>
+          <p align="center"><img src="img/10-pulse.jpg" width="300" height="300"></p>
+          <p>Pulse sensor made by Spark Fun. Bootloader must have clock to use this sensor.</p>
+          <p align="center"><img src="img/10-accerelation.jpg" width="300" height="300"></p>
+          <p>Triaxial Accelerometer. This sensor is a very powerful tool for detecting our behabior. One of the greatest example is <a href="http://www.hitachi.com/csr/society/safe/">Life Microscope</a> by Hitachi Corperation. By analyzing the typical wave and behavior, Life Microscope can visualize the amount time of activity, such as sleeping, running. </p>
+          <p>But, for calculating discomfort index, this time would sensor the temperature and humidity based on a sensor. </p>
+          <p><strong>2.2 Making a sensor node</strong> (until March 31</p>
+          <p>Based on previous lecture &quot;electronics design&quot; and data sheet of Attiny44, I re-design the LED+BUTTON board into humidity and temperature sensor node.</p>
+          <p>Designing. 4 wires shown above connects to the 4 pin sensor. I thought I would design this by using cupper wires.</p>
+          <p align="center"><img src="img/10-design.jpg" width="300" height="300"></p>
+          <p>milling with Fab Modules at Waseda University, different from SFC*SFC.</p>
+          <p align="center"><img src="img/10-milling.jpg" width="300" height="300"></p>
+          <p>At soldering, failed. I tore down the wire which should be connected to the humid temperature sensor due to thin wires for 4 pins (March 31, 2013).          </p>
+          <p align="center"><img src="img/10-ruined-board.jpg" width="300" height="300"></p>
+          <p>So, I altered the size of 4 pin wires.</p>
+          <p>At April 1, I received parts from Yuichi Hirose at Seijo Gakuen.          Milling.          Soldering.</p>
+          <p align="center"><img src="img/10-brokeagain.jpg" width="300" height="300"></p>
+          <p>broke again... (18:00 JST)</p>
+          <p>Because Attiny44 was not sold in Akihabara and the store which sells electronics parts such as Attiny45 or Resistor was closed, I decided to confirm how to use RHT03 humid temperature sensor.</p>
+          <p><strong>3. Checking the schematics and program of RHT03 with Arduino</strong></p>
+          <p>According to the <a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Sensors/Weather/RHT03.pdf">datasheet</a>, the RHT03 has 4 pins, VCC, a pin connected to MCU, null, GND. The pin to MCU transmits the 40 bits data, consisted of 16 bits Humidity Rate data, 16 bits Temperature data, check number. Each number was binary, hence we must calculate to decimal and devide by 10.</p>
+          <p>0000 0010 1000 1100 0000 0001 0101 1111 1110 1110<br/>
+          0000001010001100 / (10) -&gt; 652/10 = 65.2 [%]<br/>
+          0000000101011111 / (10) -&gt; 351/10 = 35.1[C]</p>
+          <p>Based on the schematics, I made a breadboard for this sensor. But problem is that this 40 bits data. Arduino can read integer data. However, this sensor returns binary data.</p>
+          <p> To calcualte this data, <a href="https://github.com/nethoncho/Arduino-DHT22">RHT library</a> should be needed.</p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/zD8knV_Mga0?list=UUjkIFfgnnTMzgpIIViezWFg" frameborder="0" allowfullscreen></iframe></p>
+          <p>It worked.</p>
+          <p><strong>4. Redesigning with Attiny45</strong></p>
+          <p>I checked the datasheet of Attiny45 and understood only a 4.8 [kΩ] registor should be needed for Attiny45. Attiny45 has 8 pins, but only 2 pins are available if the user utilizes jumpers.</p>
+          <p align="center"><img src="img/10-schematics.jpg" width="450" height="275"></p>
+          <p align="center"><img src="img/10-hello.45.milling.jpg" width="300" height="320"></p>
+          <p>The 4-pin might be different, but I found the gap between breadboard and the sensor was same. I guessed this distance might be a standard. (April 2, 2013)</p>
+          <p>At April 3, My friend gave me Attiny85 (which is compatible with Attiny45), Resistors. Accroding to him, Attiny45 and 85 sometimes cost more than ATMega328 due to scale of economy. I milled the circuit, and soldered it. But, it does not work. According to AVRISP mkII, green light blinked. However at burning bootloader, error occurred. After fer hours of checking schematics and datasheet of Attiny, I found there was no VCC conectivity to the MCU.  (April 4, 2013)</p>
+          <p align="center"><img src="img/10-redesign.jpg" width="300" height="300"></p><p align="center"><img src="img/10-resolder.jpg" width="300" height="300"></p>
+          <p>I altered the design of the circuit and milled it at April 3, 4:00 am JST. I soldered all the parts and made sure the connectivity of all parts. </p>
+          <p align="center"><img src="img/10-bootloader.jpg" width="300" height="300"></p>
+          <p>I was able to burn bootloader based on AVRISP MKII. But the problem was the serial communication. UART function might not be supported on Attiny. So, I searched a library which is able to comunicate via serial port. And I found it. <a href="programs/serial.c">this file</a>. </p>
+          <p class="program">$ avr-gcc -mmcu=attiny44 -Wall -Os -DF_CPU=8000000 -I./ -o serial.out serial.c<br>
+            $ avr-objcopy -j .text -O ihex serial.out serial.hex<br>
+          $ avrdude -p attiny85 -P usb -c avrispmkii -e -U flash:w:serial.hex</p>
+          <p class="program">avrdude: AVR device initialized and ready to accept instructions</p>
+          <p class="program">Reading | ################################################## | 100% 0.01s</p>
+          <p class="program">avrdude: Device signature = 0x1e930b<br>
+            avrdude: erasing chip<br>
+            avrdude: reading input file &quot;serial.hex&quot;<br>
+            avrdude: input file serial.hex auto detected as Intel Hex<br>
+            avrdude: writing flash (254 bytes):</p>
+          <p class="program">Writing | ################################################## | 100% 0.09s</p>
+          <p class="program">avrdude: 254 bytes of flash written<br>
+            avrdude: verifying flash memory against serial.hex:<br>
+            avrdude: load data flash data from input file serial.hex:<br>
+            avrdude: input file serial.hex auto detected as Intel Hex<br>
+            avrdude: input file serial.hex contains 254 bytes<br>
+            avrdude: reading on-chip flash data:</p>
+          <p class="program">Reading | ################################################## | 100% 0.07s</p>
+          <p class="program">avrdude: verifying ...<br>
+            avrdude: 254 bytes of flash verified</p>
+          <p class="program">avrdude: safemode: Fuses OK</p>
+          <p class="program">avrdude done.  Thank you.</p>
+          <p>I checked at Arduino IDE, but there was no signal. I also tried SoftwareSerial via Arduino, but it also failed. </p>
+          <p>At electronics design, my hello.44.board was not responded. There might be some problems on my computer setting.</p>
+          <p>&nbsp;</p>
+          <p><strong>Sensoring my activities:</strong></p>
+          <p>Altering the circuit design: 5 times.<br/>Going to Akihabara: 2 times.<br/>Milling circuit: 12 times.<br/>
+            Energy drink consumption: 5 cans.          </p>
+          <p><strong>Appendix: Trying pulse sensor with arduino</strong></p>
+          <p>I have wanted to assemble a device which can transmit feeling. And tested it. I could use it very easily. According to the sketches of pulse sensor, it could detect blood flow by culculating the reflexed light emitted from LED. Since the light reflection is corelated to the blood flow, this method can detect the heart beat.</p>
+          <p align="center"><iframe width="440" height="248" src="http://www.youtube.com/embed/MKIJeRk9YBY" frameborder="0" allowfullscreen></iframe></p>
+          <p>When I looked at the sample programs, Interrupt.pde was the main program which calculates the heart beat and detect the pulse. Since this sensor can detect R-R Interval, It can be used for daily purpose, not medical purpose.</p>
+          <p>&nbsp;</p>
+          <p><strong>References:          </strong></p>
+          <p>[1] A. Enta, K. Kikuchi and J. Nakagawa (2010.06) Fundamental research on architectural monitoring system collaborate with Arduino, Pachube and Sketchup, AIJ J. Technol. Des. Vol. 16, No.33, 791-794</p>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

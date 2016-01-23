@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations">final project presentations</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week Final: Final Project Presentations</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p><strong>Summary:</strong> Plant Pod ß</p>
+          <p>all files regarding this project can be found from link below.</p>
+          <p><a href="http://academy.cba.mit.edu/2013/students/kikuchi.kousuke/Data/3d_design/">3D Design</a>, <a href="http://academy.cba.mit.edu/2013/students/kikuchi.kousuke/Data/">Own Arduino Project</a>, <a href="http://academy.cba.mit.edu/2013/students/kikuchi.kousuke/Data/LCD_shield/">LCD and I2C Shield</a> and <a href="http://academy.cba.mit.edu/2013/students/kikuchi.kousuke/Data/sensor_shield/">Sensor Shield</a>. </p>
+          <p>&nbsp;</p>
+          <p><iframe width="450" height="253" src="http://www.youtube.com/embed/DFf0kRVVaP8" frameborder="0" allowfullscreen></iframe></p>
+          <p><iframe width="450" height="253" src="http://www.youtube.com/embed/IEh0-y3y_0s" frameborder="0" allowfullscreen></iframe></p>
+          <p><strong>1. Objectives          </strong></p>
+          <p>1. Knowing the proper environment for plant</p>
+          <p>2. Utilizing for child education on botany</p>
+          <p>3. Posting to Cloud Funding service</p>
+          <p>&quot;Plant pod&quot; is designed for inducing communication between plant and human by displaying sensored data.c By showing the confort for plant, we can notice the good environment for a particualr plant. Also, this product can be used for child education. I also push this product to WeMake.jp which is a venture company to actualize the idea. </p>
+          <p>&nbsp; </p>
+          <p><strong>2. Advantages to other products</strong></p>
+          <p><strong>2.1 Idea of displaying proper environment for plant</strong><br/>
+          The idea to sense the environment can be new, and useful for gardener. In addition, most plants exhibited at office will wither within few years. By knowing the proper environment, the plant will not wither with relatively low cost when compared to buying another one.</p>
+          <p><strong>2.2 Completely Hackable with Arduino</strong></p>
+          <p>One of the great feature of this product is hackable. You can update new sketch via Arduino IDE. </p>
+          <p><strong>2.3 Different variety of product</strong></p>
+          <p>If you have Arduino, you do not have to make Arduino compatible product, just making Sensor Shield and LCD I2C Shield. If we do not have Arduino, complete products can be designed much smaller than Plant Pod (ß)</p>
+          <p>&nbsp;</p>
+          <p><strong>3. Methodology</strong></p>
+          <p><strong>3.1 Electronics Design</strong></p>
+          <p><strong>3.1.1 Designing own Arduino, ArKo</strong></p>
+          <p>I designed Arko by following the following examples, FabKit, Barduino, and Archiduino design by Atsushi Enta. The difference between the other is that this board has 2 layers, top and bottom to add 3.3V regulator and AVR ISP pin headers. Also, this Arko is completely same pin configuration with Arduino hardware except 2 additional analog input pins.</p>
+          <p><img src="img/f_top_sche.png" width="450" height="290"></p>
+          <p><img src="img/f_top.png" width="450" height="377"></p>
+          <p><img src="img/f_bottom_sche.png" width="450" height="226"></p>
+          <p><img src="img/f_bottom_board.png" width="450" height="361"></p>
+          <p>However, the project is on progress the error at milling.</p>
+          <p>(2013.07.19)</p>
+          <p>After milling these board with the speed as 1 [mm/s] of Modela, I obtained surface and bottom boards. And I soldered together the all stuffes regarding this board. </p>
+          <p align="center"><img src="img/final-1.jpg" width="300" height="300"></p>
+          <p align="center"><img src="img/final-2.jpg" width="300" height="300"></p>
+          <p>However, at programming on the board, short circuit has been occurred at connecting USB and AVR ISP mkII. </p>
+          <p align="center"><img src="img/final-3.jpg" width="300" height="300"></p>
+          <p>After thinking about this problem, I found that AVR ISP's pin configurations were different from original pin configurations. The bottom board, I reversed the png format file of the bottom board, before milling it. Hence, the pin configurations of AVRISP were reversed culminating in short circuit. </p>
+          <table align="center" width="300" border="1" cellspacing="1" cellpadding="1">
+            <tr>
+              <td>MISO</td>
+              <td>VCC</td>
+            </tr>
+            <tr>
+              <td>SCK</td>
+              <td>MOSI</td>
+            </tr>
+            <tr>
+              <td>RST</td>
+              <td>GND</td>
+            </tr>
+          </table>
+          <p>The chart below was the illustration of AVRISP pin configurations. On the other hand, since I reversed the pin configuration, it became:</p>
+          <table align="center" width="300" border="1" cellspacing="1" cellpadding="1">
+            <tr>
+              <td>VCC</td>
+              <td>MISO</td>
+            </tr>
+            <tr>
+              <td>MOSI</td>
+              <td>SCK</td>
+            </tr>
+            <tr>
+              <td>GND</td>
+              <td>RST</td>
+            </tr>
+          </table>
+          <p>The AVRISP was connected to reversed, VCC to GND, GND to VCC, so this the result of short circuit.</p>
+          <p><strong>3.1.2 Checking Sensors with Arduino and a breadboard</strong></p>
+          <p>I checked all the sensors used in the sensors at a breadboard. List of the components are:</p>
+          <p>MG811, CO2 Sensor: <br>
+            DHT22, Temperature and Humidity Sensor<br>
+            Grove, Moisture Sensor: <br>
+            MPL115A2, Air Pressure Sensor: <br>
+            Piezo Sensor (to detect wind speed)<br>
+            TEMT8000, Photosensor: <br>
+            LMB0820, LCD Unit: <br>
+          NXFT15XH103FA2B, Thermistor: </p>
+          <p>I confirmed the usage of sensors except actual usage of MG811. MG811 fluctuates between 200mV to 370mV, so operational ampfier or analog reference should be used for detecting actual CO2 ppm.          </p>
+          <p><strong>3.1.3 Checking LCD with Arduino by using Jumper Pins</strong></p>
+          <p>But jumper pins were quite complicated at checking the LCD, so I decided to make a shild for it.</p>
+          <p><iframe width="450" height="253" src="http://www.youtube.com/embed/tIXEh9njp18" frameborder="0" allowfullscreen></iframe></p>
+          <p>But I found later, 8x2 characters were quite little for display. So, I buy other LCD Unit.</p>
+          <p><strong>3.1.4 Checking I2C with Arduino</strong></p>
+          <p>I2C was quite easy. All we have to do is connecting SCL and SCK, and determine slave and master. Slave board has a 4bit address and master board transmits the data with the address.</p>
+          <p><iframe width="450" height="253" src="http://www.youtube.com/embed/Q_iJxxDaZIs" frameborder="0" allowfullscreen></iframe></p>
+          <p><strong>3.1.5 Designing Sensor Node</strong></p>
+          <p><img src="img/f_sensors_sche.png" width="450" height="176"></p>
+          <p><img src="img/f_sensors_board.png" width="450" height="280"></p>
+          <p>I tried to use MPL115A2 air pressure sensor, but it was quite hard to solder. So, I had to use a breadboard-pin configurated MPL115A2.</p>
+          <p><strong>3.1.6 Designing Actuation Node</strong></p>
+          <p><img src="img/f_lcd_sche.png" width="450" height="319"></p>
+          <p><img src="img/f_lcd_board.png" width="450" height="309"></p>
+          <p>At this point, I failed to design this shield due to different pin configuration of I2C module. I should double-check my schematics between sensor node and this module.</p>
+          <p><strong>3.2 Milling</strong></p>
+          <p><strong>3.2.1 Arko, Arduino Compatible Board, failed</strong></p>
+          <p>I have tried several times, but milling the boards are quite difficult because milling will make the surface of the board quite rough. It will engender short circuit to the other layer. The solutions to this problem are speed of milling and endmill, but both are not recommended. First solution to this problem is that decreasing the speed of mill from 4 [mm/s] to 0.5-1 [mm/s]. Of course, it will spend 4 to 8 times more than the nomal milling. Second solution is using a 0.008&quot; endmill with 1 [mm/s]. However, this endmill is quite fragile so that I ruined one endmill in 2 trials.</p>
+          <p align="center"><img src="img/f_arko.jpg" width="400" height="400"></p>
+          <p><strong>3.2.2 Sensor Shield</strong></p>
+          <p>I tried 3 times for this shield. First board was milled with 4[mm/s] endmill speed, culminating short circuit between GND and VCC. I should check the connectivity at that time, but I forgot it. I had to spend 6 hours to check the electronic conectivity. Second one was tored down due to different layer of pad for soldering. Last one was succeeded with full effort. </p>
+          <p>&nbsp;</p>
+          <p><strong>3.2.3 LCD and I2C Shield</strong></p>
+          <p>I tried a number of times, maybe 7 times. Pin configuration, breakdown of cupper, rough surface. Because some pins were electrinically separated from cupper layer, I had to check the all pins were connected perfectly, consuming numerous time.</p>
+          <p>&nbsp;</p>
+          <p>The problem on this board is that pins for LCD and I2C were extremely fragile. Since this board does not have double layer of cupper, I had to solder them on top cupper layer.</p>
+          <p>&nbsp;</p>
+          <p><strong>4. Embed Programming</strong></p>
+          <p><strong>4.1 Sensor Node Only</strong></p>
+          <p>At the Embed Programming, all I must do is assembly the each programs of sensors. So, it was not so difficult. I programmed the board which can return csv format data.</p>
+          <p><strong>4.2 Actuation Node Only</strong></p>
+          <p>For actuation node, I used sample program that can work well.</p>
+          <p><strong>4.3 Transmission sensored data with I2C</strong></p>
+          <p>This time, I faced difficulties regarding serial communication and char format data. The sample program can transmit the data to the slave board. However, since Wire library does not convert float or integer to string or char class, I had to alter them. Also, Since I2C is a communication module, other modules such as Serial Communication is not able to be accepted. Hence LCD or LED can be a powerful tool for debugging.  Char data processing was other difficulties for me. I2C was so I had to implement csv separator by  myself. Such as </p>
+          <p>void receiveEvent(int howMany){<br>
+String strAry[6];<br>
+int flag = 0;<br>
+<br>
+// air pressure, lux, soil temperature, soil moisture, air temperature, air humidity, <br>
+while(1 &lt; Wire.available()){<br>
+char c = Wire.read(); // receive byte as a character<br>
+Serial.print(c);         // print the character<br>
+if(c != ','){<br>
+strAry[flag] += c;<br>
+}else{<br>
+//Serial.println(strAry[flag]);<br>
+flag += 1;<br>
+}<br>
+}</p>
+          <p>The other problem is how to convert string to float. I assembled a function which can convert it. </p>
+          <p>float StrToFloat(String str){<br>
+char carray[str.length() + 1]; //determine size of the array<br>
+str.toCharArray(carray, sizeof(carray)); //put str into an array<br>
+return atof(carray);<br>
+}</p>
+          <p><strong>4.4 Ascii Art Face</strong></p>
+          <p>Here in Japan, Ascii Art face (so called as Kaomoji) is frequently used. However, most characters for ascii art, muiti-byte character are utilized. Hence I had to select the face and its corresponding environment. The faces I designed here are: </p>
+          <p>(&gt;_&lt;)... (this face looks like sad face</p>
+          <p>(-w-)zzz (this face looks like sleepy</p>
+          <p> {{{{(*+w+*)}}}} ( this face quivers due to cold</p>
+          <p>(~Q~;;;) ( this face becomes sluguish under hot weather.</p>
+          <p>q(&gt;w&lt;)p\\ ( this face feels sick due to high humid</p>
+          <p>(-_-`) ( this face looks like sad...</p>
+          <p>o(*^w^*)o ( this face becomes overwrought.</p>
+          <p><strong>4.5 Whole Programs</strong></p>
+          <p>For sensor node:</p>
+          <p>// add air pressure<br>
+            // add DHT22<br>
+            #include &lt;Wire.h&gt;<br>
+            #include &lt;DHT22.h&gt;<br>
+          #include &lt;stdio.h&gt;</p>
+          <p>// definitons of constants<br>
+            # define DHT22_PIN 7 // DHT22<br>
+            const int address = 0x60; // Pressure<br>
+            const float B = 3380; // thermistor<br>
+            const float Rr = 10.0;<br>
+            const float Rt = 10.0;<br>
+            const float Tk = 298.15;</p>
+          <p>// definitoin of global parameters<br>
+            float lux0 = 0; // for temt8000<br>
+            float temp = 0.0; // DHT22<br>
+            float humid = 0.0; // DHT22<br>
+            int moist = 0; // for moisture sensor<br>
+            float pressure = 0.0; //for air pressure<br>
+            float soil_temp = 0.0; // for thermistor<br>
+            int times = 0;</p>
+          <p>// definitions of global parameters for i2C<br>
+            char lux[16];<br>
+            char air_temperature[16];<br>
+            char air_humid[16];<br>
+            char soil_moisture[16];<br>
+            char air_pressure[16];<br>
+            char soil_temperature[16];<br>
+            char time_str[16];</p>
+          <p>// setup a DHT22<br>
+            DHT22 myDHT22(DHT22_PIN);</p>
+          <p>int flat;</p>
+          <p>float read_coefficients(int total_bits, int fractional_bits, int zero_pad) {<br>
+            unsigned char msb, lsb;<br>
+  <br>
+            msb = Wire.read();<br>
+            lsb = Wire.read();<br>
+  <br>
+            return ((float) ((msb &lt;&lt; 8) + lsb) / ((long)1 &lt;&lt; 16 - total_bits + fractional_bits + zero_pad));<br>
+            }</p>
+          <p>unsigned int read_adc() {<br>
+            unsigned char msb, lsb;<br>
+            msb = Wire.read();<br>
+            lsb = Wire.read();<br>
+  <br>
+            return (((unsigned int)msb &lt;&lt; 8) + lsb) &gt;&gt; 6;<br>
+            } </p>
+          <p>float a0, b1, b2, c12, c11, c22;</p>
+          <p>void setup () {<br>
+            Wire.begin();<br>
+            Serial.begin(9600);<br>
+  <br>
+            Wire.beginTransmission(address);<br>
+            Wire.write(0x04);        // Read coefficient data<br>
+            Wire.endTransmission();<br>
+  <br>
+            Wire.requestFrom(address, 12);  // Request 12 bytes<br>
+            if (Wire.available()) {<br>
+            a0 = read_coefficients(16, 3, 0);<br>
+            b1 = read_coefficients(16, 13, 0);<br>
+            b2 = read_coefficients(16, 14, 0);<br>
+            c12 = read_coefficients(14, 13, 9);<br>
+            c11 = read_coefficients(11, 10, 11);<br>
+            c22 = read_coefficients(11, 10, 15);<br>
+            }<br>
+            }</p>
+          <p>void loop () {<br>
+            times += 1;<br>
+            Serial.println(&quot;start&quot;);<br>
+            int flag = 0;<br>
+            Wire.beginTransmission(address);<br>
+            Wire.write(0x12);      // Start both conversions(Pressure and Temperature)<br>
+            Wire.write(0x01);<br>
+            Wire.endTransmission();</p>
+          <p> delay(5);</p>
+          <p> Wire.beginTransmission(address);<br>
+            Wire.write((uint8_t)0x00);  // Read pressure and temperature<br>
+            Wire.endTransmission();</p>
+          <p> Wire.requestFrom(address, 4); // Request 4 bytes</p>
+          <p> if(Wire.available()) {<br>
+            unsigned int Padc = read_adc();<br>
+            unsigned int Tadc = read_adc();<br>
+  <br>
+            float Pcomp = a0 + (b1 + c11 * Padc + c12 * Tadc) * Padc + (b2 + c22 * Tadc) * Tadc;<br>
+            float Pha = Pcomp * 650 / 1023 + 500;<br>
+            // print out of air pressure<br>
+            Serial.print(&quot;air pressure=&quot;);<br>
+            Serial.println(Pha);<br>
+  <br>
+            // convert float to string<br>
+            //dtostrf(temp, 4, 2, tempC);<br>
+            dtostrf(Pha, 4,1,air_pressure);<br>
+            flag += 1;<br>
+  <br>
+            }<br>
+  <br>
+            //add temt8000 with analog 1 pin<br>
+            int in = analogRead(1);<br>
+            float ar0 = (in * 5.0/1024)/10.0;<br>
+            lux0 = (20/0.01) * ar0;<br>
+            Serial.print(&quot;LUX=&quot;);<br>
+            Serial.println(lux0);<br>
+  <br>
+            //convert float to string<br>
+            dtostrf(lux0, 4,1,lux);<br>
+            flag += 1;<br>
+  <br>
+            // add thermistor to detect the temperature on soil<br>
+            int temp_soil_val = analogRead(2);<br>
+            float rr1 = Rr * temp_soil_val / (1024.0 - temp_soil_val);<br>
+            float t = 1/(log(rr1/Rt)/B + (1/Tk));<br>
+            soil_temp = t - 273.15;<br>
+            //Serial.print(&quot;soil temperature=&quot;); <br>
+            //Serial.println(soil_temp);<br>
+  <br>
+            //convert from 25 degree<br>
+            float temp = 25.0 - soil_temp;<br>
+            float temperature = 25.0 + temp;<br>
+            Serial.print(&quot;soil temperature=&quot;);<br>
+            Serial.println(temperature);<br>
+  <br>
+            //convert float to string<br>
+            dtostrf(temperature, 3, 1, soil_temperature);<br>
+  <br>
+            flag += 1;<br>
+  <br>
+            // moisture sensor to detect the humidity on soil at analog pin 3<br>
+            int moisture = analogRead(3);<br>
+            Serial.print(&quot;soil moisture=&quot;);<br>
+            Serial.println(moisture);<br>
+  <br>
+            // convert integer to string<br>
+            //sprintf(StrBuf, &quot;%03d&quot;, i);<br>
+            sprintf(soil_moisture, &quot;%d&quot;, moisture);<br>
+            flag += 1;<br>
+  <br>
+            // see temperature and humidity from DHT22 digital 7<br>
+            // this sensor should be read last.<br>
+            DHT22_ERROR_t errorCode;<br>
+            //Serial.println(&quot;Requesting data...&quot;);<br>
+            errorCode = myDHT22.readData();</p>
+          <p> switch(errorCode){<br>
+            case DHT_ERROR_NONE:<br>
+            temp = myDHT22.getTemperatureC();<br>
+            Serial.print(myDHT22.getTemperatureC());<br>
+            Serial.print(&quot;C &quot;);<br>
+            humid = myDHT22.getHumidity();<br>
+            Serial.print(myDHT22.getHumidity());<br>
+            Serial.println(&quot;%&quot;);<br>
+  <br>
+            // convert float to string<br>
+            dtostrf(temp, 3, 1, air_temperature);<br>
+            dtostrf(humid, 3, 1, air_humid);<br>
+            flag += 1;<br>
+            break;<br>
+  <br>
+            case DHT_ERROR_CHECKSUM:<br>
+            Serial.println(&quot;check sum error&quot;);<br>
+            break;<br>
+  <br>
+            case DHT_BUS_HUNG:<br>
+            Serial.println(&quot;BUS Hung &quot;);<br>
+            break;<br>
+  <br>
+            case DHT_ERROR_NOT_PRESENT:<br>
+            Serial.println(&quot;Not Present &quot;);<br>
+            break;<br>
+  <br>
+            case DHT_ERROR_ACK_TOO_LONG:<br>
+            Serial.println(&quot;ACK time out &quot;);<br>
+            break;<br>
+  <br>
+            case DHT_ERROR_SYNC_TIMEOUT:<br>
+            Serial.println(&quot;Sync Timeout &quot;);<br>
+            break;<br>
+  <br>
+            case DHT_ERROR_DATA_TIMEOUT:<br>
+            Serial.println(&quot;Data Timeout &quot;);<br>
+            break;<br>
+  <br>
+            case DHT_ERROR_TOOQUICK:<br>
+            Serial.println(&quot;Polled to quick &quot;);<br>
+            break; <br>
+  <br>
+            } // end of case <br>
+            Serial.println(&quot;submitting sensored data to the actuator&quot;);<br>
+            Wire.beginTransmission(4);<br>
+            //Wire.write(&quot;Hello, Transmitter::&quot;);<br>
+            Wire.write(air_pressure);<br>
+            Wire.write(&quot;,&quot;);<br>
+  <br>
+            Wire.write(lux);<br>
+            Wire.write(&quot;,&quot;);<br>
+  <br>
+            Wire.write(soil_temperature);<br>
+            Wire.write(&quot;,&quot;);<br>
+  <br>
+            Wire.write(soil_moisture);<br>
+            Wire.write(&quot;,&quot;);<br>
+  <br>
+            Wire.write(air_temperature);<br>
+            Wire.write(&quot;,&quot;);<br>
+  <br>
+            Wire.write(air_humid);<br>
+            Wire.write(&quot;,&quot;);<br>
+  <br>
+            //sprintf(soil_moisture, &quot;%d&quot;, moisture);<br>
+            sprintf(time_str, &quot;%d&quot;, times);<br>
+            Wire.write(time_str);<br>
+            Wire.write(&quot;\n&quot;);<br>
+  <br>
+            int byte = Wire.endTransmission();<br>
+            Serial.println(byte);<br>
+            Serial.print(times);<br>
+            Serial.println(&quot; times transmitted.&quot;);<br>
+            //delay(5000); // for developping<br>
+            delay(10000); // for execution<br>
+  <br>
+            //must check the i2c wire is surely connected to the other board!<br>
+            }</p>
+          <p>&nbsp;</p>
+          <p>For Face</p>
+          <p>#include &lt;Wire.h&gt;<br>
+            #include &lt;LiquidCrystal.h&gt;<br>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;stdlib.h&gt;<br>
+          </p>
+          <p>//definition of LC<br>
+            LiquidCrystal lcd(12, 11, 10, 5, 4, 3, 2);</p>
+          <p>// definitoin of global parameters<br>
+            float lux0 = 0; // for temt8000<br>
+            float temp = 0.0; // DHT22<br>
+            float humid = 0.0; // DHT22<br>
+            int moist = 0; // for moisture sensor<br>
+            float pressure = 0.0; //for air pressure<br>
+            float soil_temp = 0.0; // for thermistor<br>
+            int times = 0;</p>
+          <p>// function<br>
+            float StrToFloat(String str){<br>
+            char carray[str.length() + 1]; //determine size of the array<br>
+            str.toCharArray(carray, sizeof(carray)); //put str into an array<br>
+            return atof(carray);<br>
+            }</p>
+          <p>void setup()<br>
+            {<br>
+            Wire.begin(4);                // join i2c bus with address #4<br>
+            Wire.onReceive(receiveEvent); // register event<br>
+            Serial.begin(9600);           // start serial for output<br>
+  <br>
+            // definition of lcd<br>
+            lcd.begin(20,4);<br>
+            lcd.print(&quot;hello world of plant&quot;);<br>
+            }</p>
+          <p>void loop()<br>
+            {<br>
+            delay(100);<br>
+            }</p>
+          <p>// function that executes whenever data is received from master<br>
+            // this function is registered as an event, see setup()<br>
+            void receiveEvent(int howMany){<br>
+            String strAry[6];<br>
+            int flag = 0;<br>
+  <br>
+            // air pressure, lux, soil temperature, soil moisture, air temperature, air humidity, <br>
+            while(1 &lt; Wire.available()){<br>
+            char c = Wire.read(); // receive byte as a character<br>
+            Serial.print(c);         // print the character<br>
+            if(c != ','){<br>
+            strAry[flag] += c;<br>
+            }else{<br>
+            //Serial.println(strAry[flag]);<br>
+            flag += 1;<br>
+            }<br>
+            }<br>
+  <br>
+            // convert string to float<br>
+            //float StrToFloat(String str)<br>
+            float air_pressure = StrToFloat(strAry[0]);<br>
+            float lux = StrToFloat(strAry[1]);<br>
+            float soil_temperature = StrToFloat(strAry[2]);<br>
+            float soil_moisture = StrToFloat(strAry[3]);<br>
+            float air_temperature = StrToFloat(strAry[4]);<br>
+            float air_humidity = StrToFloat(strAry[5]);<br>
+  <br>
+            // test of parameters<br>
+            lcd.clear();<br>
+            lcd.setCursor(0,2);<br>
+            lcd.print(&quot;blightness::&quot;);<br>
+            lcd.print(lux);<br>
+  <br>
+            // end submission<br>
+            int x = Wire.read();    // receive byte as an integer<br>
+            Serial.println(x);         // print the integer<br>
+  <br>
+            if(soil_moisture &lt; 30){<br>
+            // sleep mode lux &lt; 200<br>
+            // need water<br>
+            lcd.clear();<br>
+            lcd.setCursor(0,0);<br>
+            lcd.print(&quot;      (&gt;_&lt;)...&quot;);<br>
+            lcd.setCursor(0,1);<br>
+            lcd.print(&quot;I need water!!!&quot;);<br>
+  <br>
+            }else if(lux &lt; 140){ // this setting is for vertical location.<br>
+            // need water<br>
+            lcd.clear();<br>
+            lcd.setCursor(0,0);<br>
+            lcd.print(&quot;      (-w-)zzz&quot;);<br>
+            lcd.setCursor(0,1);<br>
+            lcd.print(&quot;I'm sleeping.&quot;);<br>
+            }else if(air_temperature &lt; 15){ // test ::30<br>
+            // cold mode<br>
+            lcd.clear();<br>
+            lcd.setCursor(0,0);<br>
+            lcd.print(&quot;  {{{{(*+w+*)}}}}&quot;);<br>
+            lcd.setCursor(0,1);<br>
+            lcd.print(&quot;I feel cold here...&quot;);<br>
+            }else if(air_temperature &gt; 35){ // test ::20<br>
+            //hot mode<br>
+            lcd.clear();<br>
+            lcd.setCursor(0,0);<br>
+            lcd.print(&quot;    (~Q~;;;)&quot;);<br>
+            lcd.setCursor(0,1);<br>
+            lcd.print(&quot;I feel hot here...&quot;);<br>
+  <br>
+            }else if(air_humidity &gt; 80){<br>
+            // humid mode<br>
+            lcd.clear();<br>
+            lcd.setCursor(0,0);<br>
+            lcd.print(&quot;      q(&gt;w&lt;)p\&quot;\&quot;&quot;);<br>
+            lcd.setCursor(0,1);<br>
+            lcd.print(&quot;The air is too humid&quot;);<br>
+            }else if(air_humidity &lt; 40){<br>
+            // arid mode<br>
+            lcd.clear();<br>
+            lcd.setCursor(0,0);<br>
+            lcd.print(&quot;       (-_-`)&quot;);<br>
+            lcd.setCursor(0,1);<br>
+            lcd.print(&quot;The air is arid.&quot;);<br>
+            }else{<br>
+            lcd.clear();<br>
+            lcd.setCursor(0,0);<br>
+            lcd.print(&quot;      o(*^w^*)o&quot;);<br>
+            lcd.setCursor(0,1);<br>
+            lcd.print(&quot;I like here!!&quot;);<br>
+            }<br>
+            lcd.setCursor(0,2);<br>
+            lcd.print(&quot;Temperature:: &quot;);<br>
+            lcd.print(air_temperature);<br>
+  <br>
+            lcd.setCursor(0,3);<br>
+            lcd.print(&quot;Humidity:: &quot;);<br>
+            lcd.print(air_humidity);<br>
+            }</p>
+          <p>&nbsp;</p>
+          <p align="center"><img src="img/f_display_1.jpg" width="400" height="400"></p>
+          <p align="center"><img src="img/f_sleep.jpg" width="400" height="400"></p>
+          <p><strong>6. Exterior Design</strong></p>
+          <p><strong>6.1 Composites </strong></p>
+          <p>This product requires fresh air, because it detects humidity, temperature, air pressure. Also, lux is detected. So, air should permeate the skin, as well as the light. So, I tried 3 types of composites. one was made from 3D printed egg, the others were simple balloons. I prepared natural string and lethin, and winded to the objects.</p>
+          <p align="center"><img src="img/f_balloon.jpg" width="400" height="400"></p>
+          <p align="center"><img src="img/f_balloon_sting.jpg" width="400" height="400"></p>
+          <p align="center"><img src="img/f_composites.jpg" width="400" height="400"></p>
+          <p>As a result, the shape itself might be good, but I found it was not able to embed the sensor node.</p>
+          <p>6.2 3D Printing</p>
+          <p>I tried 2 times. But both outputs were not satisfied. </p>
+          <p align="center"><img src="img/f-3dprint.jpg" width="400" height="400"></p>
+          <p align="center"><img src="img/f-w_printout.jpg" width="400" height="400"></p>
+          <p>Output result at my University.</p>
+          <p align="center"><img src="img/f-output_sfc.jpg" width="400" height="400"></p>
+          <p>Both of them were failed. So, I reused my university's output.</p>
+          <p align="center"><img src="img/f-exterior.jpg" width="400" height="400"></p>
+          <p><strong>6.3 Laser Cutter</strong></p>
+          <p>I made a box which has holes. Into the holes hooks catch the pod, bolstering the dead weight. Also, I make a hole for LCD.</p>
+          <p align="center"><img src="img/f-act-1.jpg" width="400" height="400"></p>
+          <p align="center"><img src="img/f-assembly.jpg" width="400" height="400"></p>
+          <p align="center"><img src="img/f-alteration.jpg" width="400" height="400"></p>
+          <p align="center">the pins should be short</p>
+          <p align="center"><img src="img/f-introvert.jpg" width="400" height="400"></p>
+          <p align="center">upside down...</p>
+          <p align="center"><img src="img/f-failure.jpg" width="400" height="400"></p>
+          <p align="center">failures...</p>
+          <p align="center"><img src="img/f-result1.jpg" width="400" height="400"></p>
+          <p>&nbsp;</p>
+          <p>And project will be working on... to raise it to the cloud funding platform.  </p>
+          <p>&nbsp;</p>
+          <p><strong>Summary of Failures</strong></p>
+          <p><strong>LCD and I2C Shield: 7</strong></p>
+          <p>1. Designing and making LCD and I2C Shield were failed due to different pin configuration between LCD and I2C pin</p>
+          <p>2. tore down the cupper surface number of times. Also, some endmills were irritated, culminating short circuit.</p>
+          <p>3. Low profile pin was not able to communicate to other board.          </p>
+          <p>&nbsp;</p>
+          <p><strong>ArKo, Arduino-compatible ATMega328P-AU board: 6</strong></p>
+          <p>Each times, green light of AVRISP mkii blinks, but I was not able to burn bootloader to ATMega328P.</p>
+          <p>1. RST, MOSI, MISO, SCK might not be </p>
+          <p>2. Only one time, my computer was able to recognize ATMega328P from avrdude. However, after the upload of bootloader, it did not work at all.</p>
+          <p>3. Design role. I usually design with 10mil, however to wire the center of each pins, I altered it to 5mil. Since </p>
+          <p>4. The speed of mill. default setting of fab modules recommends to use 4 [mm/s]. But this speed will result in rough surface of board, short circuit. Instead, I set up 0.5 - 1 [mm/s].</p>
+          <p>5. I also tried 0.008'' endmill found in my Lab. But I found 1/64&quot; endmill was useful because 0.008&quot; mill was extremely fragile. It will tolerate once or twice. After the schema</p>
+          <p>&nbsp;</p>
+          <p><strong>Sensor Node Shield: 1</strong></p>
+          <p>Air pressure sensor, MPL115A1, was not able to solder properly. As I found in datasheet, 6V to heat up the sensor was needed. Also, the sensored range was quite narrow. This time I quitted using this sensor. But, I will try next time.</p>
+          <p>&nbsp;</p>
+          <p><strong>Piezo Sensor: 1</strong></p>
+          <p>Wind for ventilation is a one of most important environmental factors for plant. However, wind turbine was relatively larger than most plant. </p>
+          <p>I tried to use piezo vibration sensor for low cost wind sensor for ventilation. After the soldering, I experimented wind speed and sensored data. However, even the strong wind which the plants do not prefer, piezo sensor was not able to detect wind.</p>
+          <p>&nbsp;</p>
+          <p><strong>At programming</strong></p>
+          <p>1. I2C and Serial Communication must not be used at the same time. Instead of Serial Communication, LCD might be a powerful tool.</p>
+          <p>2. I2C requires String or Char. So, we must convert float or integer into them.</p>
+          <p>3. I2C data was sent with one char. So, we must devide &quot;,&quot; at csv format data.</p>
+          <p>&nbsp;</p>
+          <p><strong>Exterior Design</strong></p>
+          <p>1. 3D Printing was failed in both university, consuming time.</p>
+          <p>2. I tried 3 times of laser cutter.</p>
+          <p>3. Composites without particular objective can not generate proper shape.</p>
+          <p>&nbsp;</p>
+          <p><strong>Assembly</strong></p>
+          <p>Sometimes, sensor node is not able to respond due to short circuit.</p>
+          <p>&nbsp;</p>
+          <p><strong>Modela Endmills I broke: 8</strong></p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>

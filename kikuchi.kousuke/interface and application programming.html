@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kousuke Kikuchi</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #333;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #000;
+      }
+
+      a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: white;
+        text-decoration: none;
+      }
+
+
+      #page {
+	background-color: #f0f0f0;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 0;
+      }
+
+      #content {
+	float: left;
+	background-color: white;
+	border: 3px solid #aaa;
+	/* [disabled]border-top: none; */
+	padding: 25px;
+	width: 500px;
+	height: auto;
+      }
+
+      #sidebar {
+	float: left;
+	width: 220px;
+	margin-left: 30px;
+      }
+
+      #footer {
+	width: 750px;
+      }
+
+      #header, #about, #getting-started {
+	padding-left: 30px;
+	padding-right: 30px;
+      }
+
+
+      #header {
+        background-image: url("assets/rails.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        height: 64px;
+      }
+      #header h1, #header h2 {margin: 0}
+      #header h2 {
+        color: #888;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+
+      #about h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      #about-content {
+        background-color: #ffd;
+        border: 1px solid #fc0;
+        margin-left: -55px;
+        margin-right: -10px;
+      }
+      #about-content table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-collapse: collapse;
+      }
+      #about-content td {
+        padding: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      #about-content td.name  {color: #555}
+      #about-content td.value {color: #000}
+
+      #about-content ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #about-content.failure {
+        background-color: #fcc;
+        border: 1px solid #f00;
+      }
+      #about-content.failure p {
+        margin: 0;
+        padding: 10px;
+      }
+
+
+      #getting-started {
+        border-top: 1px solid #ccc;
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+      #getting-started h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      #getting-started h2 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      #getting-started ol {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #getting-started li {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 25px;
+      }
+      #getting-started li h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        color: #333;
+      }
+      #getting-started li p {
+        color: #555;
+        font-size: 13px;
+      }
+
+
+      #sidebar ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      #sidebar ul h3 {
+        margin-top: 25px;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      #sidebar li {
+        list-style-type: none;
+      }
+      #sidebar ul.links li {
+        margin-bottom: 5px;
+      }
+
+      .filename {
+        font-style: italic;
+      }
+    </style>
+    <script type="text/javascript">
+      function about() {
+        info = document.getElementById('about-content');
+        if (window.XMLHttpRequest)
+          { xhr = new XMLHttpRequest(); }
+        else
+          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+        xhr.open("GET","rails/info/properties",false);
+        xhr.send("");
+        info.innerHTML = xhr.responseText;
+        info.style.display = 'block'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="sidebar">
+        <h3>Kousuke Kikuchi</h3>
+        <ul>
+          <ul class="links">
+            
+            <li><a href="index.html">top page</a></li>
+            <li><a href="introduction.html">introduction</a></li>
+            <li><a href="statement of objectives.html">statement of objectives</a></li>
+            <li><a href="pdf/cv.pdf">curriculum vitae</a></li>
+            <li><a href="works.html">works</a></li>
+            <li><a href="researches.html">researches</a></li>
+            <li><a href="travels.html">travels</a></li>
+          <li><a href="contacts.html">contacts</a></li></ul>
+          <li><a href="links.html">links</a>
+            <h3>Fab Academy 2013 Classes</h3>
+            <ul class="links">
+              <li><a href="principles and practices, project management.html">principles and practices, project management</a></li>
+              <li><a href="computer-aided design.html">computer-aided design</a></li>
+              <li><a href="computer-controlled cutting.html">computer-controlled cutting</a></li>
+              <li><a href="electronics production.html">electronics production</a></li>
+              <li><a href="3D scanning and printing.html">3D scanning and printing</a></li>
+              <li><a href="electronics design.html">electronics design</a></li>
+              <li><a href="molding and casting.html">molding and casting</a></li>
+              <li><a href="embedded programming.html">embedded programming</a></li>
+              <li><a href="computer-controlled machining.html">computer-controlled machining</a></li>
+              <li><a href="input devices.html">input devices</a></li>
+              <li><a href="composites.html">composites</a></li>
+              <li><a href="interface and application programming.html">interface and application programming</a></li>
+              <li><a href="output devices.html">output devices</a></li>
+              <li><a href="networking and communications.html">networking and communications</a></li>
+              <li><a href="mechanical design, machine design.html">mechanical design, machine design</a></li>
+              <li><a href="applications and implications.html">applications and implications</a></li>
+              <li><a href="invention, intellectual property, and income.html">invention, intellectual property, and income</a></li>
+              <li><a href="project development.html">project development</a></li>
+              <li><a href="final project presentations.html">final project presentations</a></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="header">
+          <h1>Kousuke Kikuchi</h1>
+          <h2>Fab Academy Participant and PhD Candidate</h2>
+        </div>
+
+        <div id="about">
+          <h3>Week 12: Interface and Application Programming</h3>
+          <div id="about-content" style="display: none"></div>
+        </div>
+
+        <div id="getting-started">
+          <p><strong>Summary:</strong> A Visualization of Environmental Sensor</p>
+          <p align="center"><iframe width="450" height="253" src="http://www.youtube.com/embed/BFmzUmjeStw?list=UUjkIFfgnnTMzgpIIViezWFg" frameborder="0" allowfullscreen></iframe></p>
+          <p><strong>1. Introduction</strong></p>
+          <p>Humidity and temperature are the significant factors to determine the confort in space. For example, Disconfort Index is calculated by the following equiation:</p>
+          <p>DI = 0.81 * temperature + 0.01 * humidity *(0.99 * temperature-14.3) + 46.3;</p>
+          <p>Because I have not resolve the problem on Serial Communication between computer and ATtiny MCU, I used Arduino for a sensor node.</p>
+          <p><strong>2. Method</strong></p>
+          <p>Firstly, I tried the combination of Arduino and openFrameworks. I programmed the same example of DHT22 to Arduino. Also, I used the serial communication example file to check serial communication. However, the result varied due to the speed of the communication. I recognited the importance of &quot;Timing of transmit and receive&quot; in both computer and a sensor node. I quited this method, because I felt the setup of ofSerial was quite difficult due to the bits to be determined.</p>
+          <p>Secondly, I tried Arduino and Processing. I altered the arduino program that if a sensor receives a message from computer, it sends a data to computer. Also at the processing program, I subscribed that same method, and added mouseClick could send a message to Arduino.</p>
+          <p>The result of it was the vidio shown above.          </p>
+          <p><strong>3. Programs:</strong></p>
+          <p><strong>3.1 Arduino</strong></p>
+          <p>#include &lt;DHT22.h&gt;<br>
+            // Only used for sprintf<br>
+          #include &lt;stdio.h&gt;</p>
+          <p>// Data wire is plugged into port 7 on the Arduino<br>
+            // Connect a 4.7K resistor between VCC and the data pin (strong pullup)<br>
+            #define DHT22_PIN 7</p>
+          <p>// Setup a DHT22 instance<br>
+            DHT22 myDHT22(DHT22_PIN);</p>
+          <p>void setup(void)<br>
+            {<br>
+            // start serial port<br>
+            Serial.begin(9600);<br>
+            //Serial.println(&quot;DHT22 Library Demo&quot;);<br>
+            }</p>
+          <p>void loop(void)<br>
+            { <br>
+            DHT22_ERROR_t errorCode;<br>
+  <br>
+            // The sensor can only be read from every 1-2s, and requires a minimum<br>
+            // 2s warm-up after power-on.<br>
+            delay(2000);<br>
+  <br>
+            //Serial.print(&quot;Requesting data...&quot;);<br>
+            errorCode = myDHT22.readData();<br>
+            switch(errorCode)<br>
+            {<br>
+            case DHT_ERROR_NONE:<br>
+            //success to read sensor's data<br>
+            float temp;<br>
+            temp = myDHT22.getTemperatureC();<br>
+            float humid;<br>
+            humid = myDHT22.getHumidity();<br>
+  <br>
+            // if ready for data<br>
+            if(Serial.available()&gt;0){<br>
+            Serial.print(temp,DEC);<br>
+            Serial.print(&quot;,&quot;);<br>
+            Serial.println(humid,DEC);<br>
+            Serial.read();<br>
+            }<br>
+  <br>
+  <br>
+  <br>
+            case DHT_ERROR_CHECKSUM:<br>
+            Serial.print(&quot;check sum error &quot;);<br>
+            Serial.print(myDHT22.getTemperatureC());<br>
+            Serial.print(&quot;C &quot;);<br>
+            Serial.print(myDHT22.getHumidity());<br>
+            Serial.println(&quot;%&quot;);<br>
+            break;<br>
+            case DHT_BUS_HUNG:<br>
+            Serial.println(&quot;BUS Hung &quot;);<br>
+            break;<br>
+            case DHT_ERROR_NOT_PRESENT:<br>
+            Serial.println(&quot;Not Present &quot;);<br>
+            break;<br>
+            case DHT_ERROR_ACK_TOO_LONG:<br>
+            Serial.println(&quot;ACK time out &quot;);<br>
+            break;<br>
+            case DHT_ERROR_SYNC_TIMEOUT:<br>
+            Serial.println(&quot;Sync Timeout &quot;);<br>
+            break;<br>
+            case DHT_ERROR_DATA_TIMEOUT:<br>
+            Serial.println(&quot;Data Timeout &quot;);<br>
+            break;<br>
+            case DHT_ERROR_TOOQUICK:<br>
+            /Serial.println(&quot;Polled to quick &quot;);<br>
+            break;<br>
+            }<br>
+            }</p>
+          <p><strong>3.2 Processing</strong></p>
+          <p>import processing.serial.*;</p>
+          <p>// definition<br>
+            Serial port;<br>
+            float temp;<br>
+            float humid;<br>
+            float DI;</p>
+          <p>void setup(){<br>
+            size(500,500);<br>
+            //println(Serial.list());<br>
+            port=new Serial(this,&quot;/dev/cu.usbmodemfd121&quot;,9600);<br>
+            port.clear();<br>
+            port.bufferUntil(10); <br>
+            }</p>
+          <p>void draw(){<br>
+            //不快指数＝０．８１×気温＋０．０１×湿度×（０．９９×気温－１４．３）＋４６．３<br>
+  <br>
+  <br>
+            int inv;<br>
+            inv = int((100-DI)*2.55);<br>
+            background(inv, 255,255);<br>
+            }</p>
+          <p>void mousePressed(){<br>
+            port.write(65);<br>
+            }</p>
+          <p>void mouseReleased(){</p>
+          <p>}</p>
+          <p>void serialEvent(Serial p){<br>
+            String stringData=port.readStringUntil(10);<br>
+            if(stringData != null){<br>
+            //println(stringData);<br>
+            stringData=trim(stringData);<br>
+            float data[] = float(split(stringData, &quot;,&quot;));<br>
+            temp = data[0];<br>
+            humid = data[1];<br>
+            DI = 0.81 * temp + 0.01 * humid*(0.99 * temp-14.3)+46.3;<br>
+            println(&quot;DI:&quot; + DI);<br>
+            port.write(65);<br>
+            }<br>
+            }</p>
+          <p><strong>3.3 Note</strong></p>
+          <p>The most important notes at this interface and programming is the timing of serial communication. To solve the problem, at the end of processing program, it transmits bit toward MCU. After MCU can receive the data, MCU was ready to submit the next dataset via serial communication.</p>
+          <p align="center"><img src="img/appli-2.jpg" width="420" height="420"></p>
+          <p align="center"><img src="img/appli-arduino-serial.jpg" width="420" height="420"></p>
+          <p align="center"><img src="img/appli-change.jpg" width="420" height="420"></p>
+          <p align="center"><img src="img/appli-changed_color.jpg" width="420" height="420"></p>
+          <p align="center"><img src="img/appli-white.jpg" width="420" height="420"></p>
+          <p>&nbsp;</p>
+          <p><strong>4. A Problem of Serial Communication with ATtiny MCU</strong></p>
+          <p>I have had a serious problem on Serial Communication between ATtiny Series. This problem was not solved even I paid the several effort. As I has shown on the e-mail,          </p>
+          <p>1. Boards<br>
+            - I made 3 boards. 2 of them were same as tutorials' schematics.<br>
+            - All the boards can be fused and uploaded successfully.<br>
+          - LED blinked on hello.44.blink board.</p>
+          <p>2. Programs<br>
+            - I wrote LED Blink program on C language and it worked well.<br>
+            - I wrote arduino program to attain DHT22 sensor and it worked.<br>
+            * I edited the DHT22 program fit to ATtiny85, but it did not work.<br>
+            * I wrote a simple program of serial communication to ATtiny85 on C language, but it did not work.<br>
+            * I used the same program as hello.temp.45.c but it did not work.<br/>
+            * Arduino's SoftwareSerial did not work at least at hello.temp.45. </p>
+          <p>3. Programming Environments<br>
+            - Macports<br>
+            - CrossPack for AVR Developing<br>
+            both of them worked well except serial communication</p>
+          <p>4. ISP<br>
+            - I used AVRISP mkII<br>
+            - Green LED shined at all the boards</p>
+          <p>5. Operating System<br>
+            - I used Mac OS 10.8.3</p>
+          <p>6. Languages to Check Serial Port<br>
+            - Ruby (based on RubySerialPort, http://ruby-serialport.rubyforge.org)<br>
+            - Python (hello.45.temp.py)<br>
+            - Arduino (Serial Port)<br>
+            * Serial communication was not worked under both of them </p>
+          <p>7. Cable<br>
+            - I used ftdi cable whose Rx and Tx were worked. The boards via ftdi was recognized with my computer.<br>
+            - Rx pin was surely connected to PB2(ATtiny44 and ATtiny85)</p>
+          <p>The problem on serial communication remained. I will check with the other participant in Japan.</p>
+          <p>(note)</p>
+          <p>At Networking and Communication, the serial communication worked properly. Hence, the problem on serial communication was due to the milling board whose surface were rough. Indeed, we must check the milling board before soldering to check the circuit work well.</p>
+        </div>
+      </div>
+      <div align="right" id="footer">Kousuke Kikuchi,2013, All Rights might be reserved.  <img src="img/CC-BY-NC.png" width="88" height="32"></div>
+    </div>
+  </body>
+</html>
